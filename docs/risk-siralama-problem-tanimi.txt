@@ -1,0 +1,47 @@
+# Risk Sıralama Problemi — Girdi/Çıktı Tanımı
+
+## Amaç
+
+Bu kısımdaki amaç envanterdeki her zafiyeti, sömürülme (exploitation) ve etki potansiyeline göre
+sıralamaktır, böylece savunma kısmı (K5) ve rapor (K1) hangi zafiyetlerin öncelikli
+olduğunu görebilecektir. Bu, projenin AI/önceliklendirme bacağının (H4-H8) temelidir.
+
+## Problem Tipi
+
+İki yaklaşımdan biri seçilebilir (H6'da netleştirilecek):
+
+- **Regresyon**: Her zafiyet için 0-100 arası bir "risk skoru" üretmek.
+- **Sıralama (ranking) / Sınıflandırma**: Zafiyetleri {Yüksek / Orta / Düşük} olacak şekilde risk
+  sınıflarına ayırmak.
+
+İlk sürüm (v1) için basitlik açısından **Sınıflandırma veya Regresyon** önerilmektedir;
+karmaşık ranking modelleri (ör. LambdaMART) bu ölçekte gerekli görülmemektedir.
+
+## Girdi (Features)
+
+Her satır bir zafiyeti temsil etmektedir. Önerilen sütunlar (K2 ile `inventory_template.csv`
+üzerinden uzlaşılacak):
+
+| Sütun | Açıklama | Kaynak |
+|---|---|---|
+| `cve_id` | Zafiyetin CVE numarası (varsa) | NVD / tarama çıktısı |
+| `cvss_score` | CVSS v3.1 taban skoru (0-10) | NVD veya K2'nin manuel hesabı |
+| `cvss_vector` | Saldırı karmaşıklığı, gerekli erişim, etki gibi alt bileşenler | NVD |
+| `epss_score` | Gerçek dünyada sömürülme olasılığı (0-1) | FIRST EPSS API |
+| `exposure` | Uygulamanın dışa açık olup olmadığı (internet / iç ağ) | Mimari bilgisi |
+| `auth_required` | Sömürmek için kimlik doğrulama gerekip gerekmediği (evet/hayır) | CVSS vektöründen türetilir |
+| `attack_complexity` | Düşük/Yüksek | CVSS vektöründen türetilir |
+| `asset_criticality` | Zafiyetin bulunduğu bileşenin iş açısından önemi (1-5) | Takım kararı |
+| `cwe_id` | Zafiyet kategorisi | K3'ün eşleme tablosu |
+
+## Çıktı
+
+- **Regresyon senaryosu**: `risk_score` (0-100), yüksek skor = öncelikli.
+- **Sınıflandırma senaryosu**: `risk_class` ∈ {Yüksek, Orta, Düşük}.
+- Ek olarak: zafiyetlerin skora göre sıralı listesi (`ai/results_v1.csv`), böylece
+  K3 bu listeyi kullanarak saldırı grafiğinde (H7) görselleştirebilir.
+
+## Değerlendirme
+
+- Model çıktısı, K2'nin CVSS-only sıralamasıyla (baseline) karşılaştırılacak.
+- Basit metrik: ilk N zafiyette (ör. top-10) örtüşme oranı, ya da regresyon için MSE/R².
