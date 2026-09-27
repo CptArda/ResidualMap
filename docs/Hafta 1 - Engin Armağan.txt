@@ -1,0 +1,48 @@
+WAF (Web Application Firewall)
+
+WAF (Web Application Firewall) web uygulamalarına gelen HTTP/HTTPS trafiğini inceleyen özel bir güvenlik duvarı türüdür.
+Klasik ağ güvenlik duvarlarından farkı, sadece IP/port bilgisine değil isteğin içeriğine yani form alanları, URL parametreleri ve cookie'ler kısımlarına bakabilmesidir.
+SQL injection, XSS ve CSRF gibi web'e özgü saldırıları imza tabanlı kurallarla veya davranışsal analizle tespit edip engeller.
+Trafiği işlemek için alt katmanlardan (3. Katman — Ağ katmanı ve 4. Katman — Taşıma katmanı) da geçer, ancak ayırt edici işlevini 7. Katman'da (Uygulama katmanında) gerçekleştirir.
+
+KAYNKALAR: CloudFlare (https://www.cloudflare.com/learning/ddos/glossary/web-application-firewall-waf/) - BunkerWeb (https://github.com/bunkerity/bunkerweb?utm_campaign=self&utm_source=bunkerwebio)
+
+IDS/IPS (Intrusion Detection/Prevention System)
+
+IDS (Intrusion Detection System - Saldırı Tespit Sistemi) ve IPS (Intrusion Prevention System - Saldırı Önleme Sistemi), bir ağ veya sistem üzerindeki şüpheli/kötü niyetli aktiviteleri tespit etmek (ve gerekirse engellemek) için kullanılan güvenlik teknolojileridir.
+
+IDS — Tespit
+Ağ trafiğini veya sistem aktivitelerini izler, anormal veya bilinen saldırı desenlerine uyan davranışları tespit eder.
+Bir tehdit bulduğunda alarm/log üretir, yöneticiyi bilgilendirir.
+Trafiği doğrudan engellemez — pasif bir izleme sistemidir
+
+IPS — Önleme
+IDS'nin yaptığı her şeyi yapar, ancak ek olarak aktif müdahale eder.
+Şüpheli trafiği gerçek zamanlı olarak engeller, bağlantıyı sonlandırır veya paketi düşürür.
+Trafiğin doğrudan içinden geçtiği (inline) bir noktada konumlanır, bu yüzden performansı ve yanlış pozitifleri daha kritik hale gelir.
+
+KAYNAKLAR: HPE (https://www.hpe.com/tr/en/what-is/ids-ips.html) - Suricata (https://github.com/oisf/suricata)
+
+SIEM (Security Information and Event Management)
+
+SIEM (Security Information and Event Management), bir kuruluşun sunucular, ağ cihazları, güvenlik duvarları ve uygulamalar gibi farklı kaynaklardan gelen güvenlikle ilgili log ve olay verilerini merkezi olarak toplayan bir sistemdir.
+Bu veriler normalize edilip birbiriyle ilişkilendirilerek şüpheli aktiviteler ve potansiyel tehditler tespit edilir.
+Tespit edilen olaylar için güvenlik ekiplerine gerçek zamanlı uyarılar gönderilir ve ayrıca uyumluluk raporlaması ile adli analiz için geçmiş veriler saklanır.
+
+KAYNAKLAR: Microsoft (https://www.microsoft.com/en-us/security/business/security-101/what-is-siem) - Wazuh (https://github.com/wazuh/wazuh)
+
+IAM (Identity and Access Management)
+
+IAM (Identity and Access Management), kullanıcıların ve sistemlerin dijital kaynaklara erişimini kontrol eden kimlik doğrulama ve yetkilendirme çerçevesidir.
+Kimlik doğrulama kullanıcının gerçekten iddia ettiği kişi olup olmadığını, yetkilendirme ise hangi kaynaklara erişebileceğini belirler.
+Bulut platformlarında (AWS IAM, Azure AD gibi) ve kurumsal sistemlerde yaygın olarak kullanılır. Temel amacı, en az yetki ilkesiyle güvenliği artırmak ve yetkisiz erişimi önlemektir.
+
+KAYNAKLAR: IBM (https://www.ibm.com/think/topics/identity-access-management) - Keycloak (https://github.com/keycloak/keycloak)
+
+Ağ segmentasyonu
+
+Ağ segmentasyonu, bir ağı VLAN, subnet veya güvenlik duvarları kullanarak daha küçük, izole alt ağlara bölme işlemidir.
+Amacı, bir bölümdeki güvenlik ihlalinin diğer bölümlere yayılmasını engellemek, hassas sistemlere erişimi sınırlamak ve ağ performansını artırmaktır.
+Segmentler arası trafik genellikle güvenlik duvarı kuralları veya erişim kontrol listeleri (ACL) ile denetlenir.
+
+KAYNAKLAR: CISCO (https://www.cisco.com/site/us/en/learn/topics/security/what-is-network-segmentation.html)
