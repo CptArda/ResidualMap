@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "N0",
+      "label": "Dış Ağ (Saldırgan)",
+      "title": "Başlangıç Noktası"
+    },
+    {
+      "id": "N1",
+      "label": "Kullanıcı Oturumu (BOLA/IDOR)",
+      "title": "Oturum Ele Geçirildi"
+    },
+    {
+      "id": "N2",
+      "label": "Admin Paneli Erişimi (JWT Bypass)",
+      "title": "Yetki Yükseltildi"
+    },
+    {
+      "id": "N3",
+      "label": "Hedef: Veritabanı Sızıntısı (SQLi)",
+      "title": "Kritik Veri İhlali"
+    }
+  ],
+  "edges": [
+    {
+      "source": "N0",
+      "target": "N1",
+      "label": "IDOR",
+      "vulnerability_name": "BOLA / IDOR",
+      "capec_id": "CAPEC-1",
+      "mitre_technique": "T1190",
+      "cvss": 7.5,
+      "weight": 7.5
+    },
+    {
+      "source": "N0",
+      "target": "N2",
+      "label": "Login SQLi",
+      "vulnerability_name": "Login SQL Injection",
+      "capec_id": "CAPEC-66",
+      "mitre_technique": "T1190",
+      "cvss": 9.8,
+      "weight": 9.8
+    },
+    {
+      "source": "N1",
+      "target": "N2",
+      "label": "JWT None Alg",
+      "vulnerability_name": "JWT Key Confusion",
+      "capec_id": "CAPEC-59",
+      "mitre_technique": "T1078",
+      "cvss": 8.8,
+      "weight": 8.8
+    },
+    {
+      "source": "N2",
+      "target": "N3",
+      "label": "Data Dumping",
+      "vulnerability_name": "SQL Injection",
+      "capec_id": "CAPEC-66",
+      "mitre_technique": "T1190",
+      "cvss": 9.8,
+      "weight": 9.8
+    }
+  ]
+}
