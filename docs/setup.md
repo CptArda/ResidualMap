@@ -11,7 +11,7 @@
    cd residualmap
 
 2. Juice Shop'u çalıştırın:
-   docker run -d -p 3000:3000 bkimminich/juice-shop
+   docker run --rm -p 127.0.0.1:3000:3000 bkimminich/juice-shop
 
 3. Tarayıcıda açın: http://localhost:3000
 
@@ -19,5 +19,3 @@
 - Ana sayfa açılıyor mu?
 - "Account" menüsünden kayıt olabiliyor musunuz?
 
-## Sorun Giderme
-- Port 3000 doluysa: docker run -d -p 3001:3000 bkimminich/juice-shop
