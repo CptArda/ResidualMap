@@ -1,0 +1,43 @@
+### 1. Saldırı Grafiği (Attack Graph) Nedir?
+Saldırı Grafiği; hedef sistemdeki güvenlik açıklarının, yetki durumlarının 
+ve ağ topolojisinin bir saldırgan tarafından hedef varlığa ulaşmak amacıyla 
+zincirleme biçimde nasıl istismar edilebileceğini yönlü çizgelerle 
+(*Directed Graph*) modelleyen analiz yöntemidir. 
+*(Kaynak: Wang et al., Network Security Metrics, Springer)*
+
+---
+
+### 2. Taktik ve Teknik Ayrımı (MITRE ATT&CK)
+MITRE ATT&CK matrisi, saldırgan davranışlarını iki temel katmanda ele alır:
+- **Taktik (*Neden / Amaç?*):** Saldırganın operasyonel hedefidir 
+  (ör. *Initial Access*, *Privilege Escalation*).
+- **Teknik (*Nasıl / Yöntem?*):** İlgili taktiği gerçekleştirmek için 
+  kullanılan somut eylemdir (ör. *T1190 Exploit Public-Facing Application*).
+*(Kaynak: MITRE, ATT&CK Framework, attack.mitre.org)*
+
+---
+
+### 3. ATT&CK Navigator
+Güvenlik ekiplerinin ATT&CK matrisi üzerindeki teknik ve taktikleri 
+etkileşimli bir arayüzde incelemesini sağlar. Projede potansiyel saldırı 
+rotalarını görselleştirmek, savunma kapsamını analiz etmek ve tehditleri 
+katmanlar (*layers*) halinde renklendirmek amacıyla kullanılır. 
+*(Kaynak: MITRE, ATT&CK Navigator, mitre-attack.github.io/attack-navigator)*
+
+---
+
+### 4. CAPEC (Common Attack Pattern Enumeration and Classification)
+Uygulama ve yazılım katmanına odaklanan CAPEC; saldırganların güvenlik 
+zafiyetlerini (CWE) istismar etmek için kullandığı ortak saldırı 
+mekanizmalarını ve sömürü desenlerini (*Attack Patterns*) kataloglar. 
+*(Kaynak: MITRE/CISA, CAPEC, capec.mitre.org)*
+
+---
+
+### 5. ResidualMap Mimarisi Entegrasyonu
+- **Düğümler (States):** Saldırganın erişim ve yetki seviyelerini temsil eder.
+- **Kenarlar (Transitions):** CAPEC desenleri ve ATT&CK teknikleri ile 
+  tanımlanan zafiyet sömürü adımlarıdır.
+- **Yol Analizi:** CVSS skorlarıyla ağırlıklandırılan bu çizgeler üzerinden 
+  en olası sömürü rotaları matematiksel olarak hesaplanır. 
+*(Kaynak: Noel & Jajodia, Managing Attack Graph Complexity, IEEE)*
