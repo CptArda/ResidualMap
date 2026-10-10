@@ -81,7 +81,7 @@ if os.path.exists(zap_path):
         except json.JSONDecodeError:
             print("Hata: zap_baseline.json dosyası geçerli bir JSON formatında değil.")
 
-# CSV klasörünü oluşturur ve verileri yazdırırpython map_cwe.py
+# CSV klasörünü oluşturur ve verileri yazdırır
 os.makedirs("inventory", exist_ok=True)
 with open(output_csv, "w", newline="", encoding="utf-8") as f:
     writer = csv.DictWriter(f, fieldnames=["vulnerability_name", "juice_shop_category", "cwe_id", "cwe_name"])
