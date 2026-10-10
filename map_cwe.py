@@ -8,6 +8,35 @@ output_csv = "inventory/cwe_mapping.csv"
 # Ayıklanan zaafiyetlerin koyulacağı liste
 vulnerabilities = []
 
+# ZAP alert veya CWE ID'lerini Juice Shop kategorilerine eşleyen sözlük
+CATEGORY_MAP = {
+    "CWE-693": "Security Misconfiguration",
+    "CWE-264": "Broken Access Control",
+    "CWE-749": "Injection",
+    "CWE-16": "Security Misconfiguration",
+    "CWE-497": "Sensitive Data Exposure",
+    "CWE-524": "Cryptographic Failures",
+    "CWE-79": "Cross-Site Scripting (XSS)",
+    "CWE-89": "Injection"
+}
+
+
+def get_juice_shop_category(cwe_id, alert_name):
+    # Önce CWE ID'sine göre eşleme yap
+    if cwe_id in CATEGORY_MAP:
+        return CATEGORY_MAP[cwe_id]
+
+    # CWE yoksa veya bulunamadıysa zafiyet ismine göre arat
+    name_lower = alert_name.lower()
+    if "header" in name_lower or "policy" in name_lower:
+        return "Security Misconfiguration"
+    elif "leak" in name_lower or "disclosure" in name_lower or "timestamp" in name_lower:
+        return "Sensitive Data Exposure"
+    elif "content" in name_lower or "cache" in name_lower:
+        return "Cryptographic Failures"
+
+    return "Miscellaneous"
+
 # Dosyayı okuma modunda utf-8 formatında açar ve pythonun anlayacağı sözlük yapısına dönüstürür
 if os.path.exists(zap_path):
     with open(zap_path, "r", encoding="utf-8") as f:
@@ -37,9 +66,12 @@ if os.path.exists(zap_path):
                     cwe_str = f"CWE-{cweid}" if str(cweid).isdigit() and str(cweid) != "0" else "CWE-Unknown"
 
                     # Aynı zafiyetin tekrar eklenmesini önlemek için kontrol eder
+
+                    category = get_juice_shop_category(cwe_str, name)
+
                     vuln_entry = {
                         "vulnerability_name": name,
-                        "juice_shop_category": "Web Vulnerability",
+                        "juice_shop_category": category,
                         "cwe_id": cwe_str,
                         "cwe_name": name
                     }

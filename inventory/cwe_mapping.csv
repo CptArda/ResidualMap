@@ -1,13 +1,13 @@
 vulnerability_name,juice_shop_category,cwe_id,cwe_name
-Content Security Policy (CSP) Header Not Set,Web Vulnerability,CWE-693,Content Security Policy (CSP) Header Not Set
-Cross-Domain Misconfiguration,Web Vulnerability,CWE-264,Cross-Domain Misconfiguration
-Cross-Origin-Embedder-Policy Header Missing or Invalid,Web Vulnerability,CWE-693,Cross-Origin-Embedder-Policy Header Missing or Invalid
-Cross-Origin-Opener-Policy Header Missing or Invalid,Web Vulnerability,CWE-693,Cross-Origin-Opener-Policy Header Missing or Invalid
-Dangerous JS Functions,Web Vulnerability,CWE-749,Dangerous JS Functions
-Deprecated Feature Policy Header Set,Web Vulnerability,CWE-16,Deprecated Feature Policy Header Set
-"Server Leaks Version Information via ""Server"" HTTP Response Header Field",Web Vulnerability,CWE-497,"Server Leaks Version Information via ""Server"" HTTP Response Header Field"
-Timestamp Disclosure - Unix,Web Vulnerability,CWE-497,Timestamp Disclosure - Unix
-Modern Web Application,Web Vulnerability,CWE-Unknown,Modern Web Application
-Non-Storable Content,Web Vulnerability,CWE-524,Non-Storable Content
-Storable and Cacheable Content,Web Vulnerability,CWE-524,Storable and Cacheable Content
-Storable but Non-Cacheable Content,Web Vulnerability,CWE-524,Storable but Non-Cacheable Content
+Content Security Policy (CSP) Header Not Set,Security Misconfiguration,CWE-693,Content Security Policy (CSP) Header Not Set
+Cross-Domain Misconfiguration,Broken Access Control,CWE-264,Cross-Domain Misconfiguration
+Cross-Origin-Embedder-Policy Header Missing or Invalid,Security Misconfiguration,CWE-693,Cross-Origin-Embedder-Policy Header Missing or Invalid
+Cross-Origin-Opener-Policy Header Missing or Invalid,Security Misconfiguration,CWE-693,Cross-Origin-Opener-Policy Header Missing or Invalid
+Dangerous JS Functions,Injection,CWE-749,Dangerous JS Functions
+Deprecated Feature Policy Header Set,Security Misconfiguration,CWE-16,Deprecated Feature Policy Header Set
+"Server Leaks Version Information via ""Server"" HTTP Response Header Field",Sensitive Data Exposure,CWE-497,"Server Leaks Version Information via ""Server"" HTTP Response Header Field"
+Timestamp Disclosure - Unix,Sensitive Data Exposure,CWE-497,Timestamp Disclosure - Unix
+Modern Web Application,Miscellaneous,CWE-Unknown,Modern Web Application
+Non-Storable Content,Cryptographic Failures,CWE-524,Non-Storable Content
+Storable and Cacheable Content,Cryptographic Failures,CWE-524,Storable and Cacheable Content
+Storable but Non-Cacheable Content,Cryptographic Failures,CWE-524,Storable but Non-Cacheable Content
