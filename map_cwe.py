@@ -4,7 +4,9 @@ import os
 
 # Dosya yolları
 zap_path = "inventory/raw/zap_baseline.json"
+trivy_path = "inventory/raw/trivy.json"
 output_csv = "inventory/cwe_mapping.csv"
+
 # Ayıklanan zaafiyetlerin koyulacağı liste
 vulnerabilities = []
 
@@ -28,7 +30,7 @@ def get_juice_shop_category(cwe_id, alert_name):
 
     # CWE yoksa veya bulunamadıysa zafiyet ismine göre arat
     name_lower = alert_name.lower()
-    if "header" in name_lower or "policy" in name_lower:
+    if "header" in name_lower or "policy" in name_lower or "config" in name_lower:
         return "Security Misconfiguration"
     elif "leak" in name_lower or "disclosure" in name_lower or "timestamp" in name_lower:
         return "Sensitive Data Exposure"
@@ -37,7 +39,8 @@ def get_juice_shop_category(cwe_id, alert_name):
 
     return "Miscellaneous"
 
-# Dosyayı okuma modunda utf-8 formatında açar ve pythonun anlayacağı sözlük yapısına dönüstürür
+
+# Dosyayı okuma modunda utf-8 formatında açar ve pythonun anlayacağı sözlük yapısına dönüştürür
 if os.path.exists(zap_path):
     with open(zap_path, "r", encoding="utf-8") as f:
         try:
@@ -65,7 +68,41 @@ if os.path.exists(zap_path):
                     # Yakalanan numarayı resmi formata sokar
                     cwe_str = f"CWE-{cweid}" if str(cweid).isdigit() and str(cweid) != "0" else "CWE-Unknown"
 
+                    category = get_juice_shop_category(cwe_str, name)
+
+                    vuln_entry = {
+                        "vulnerability_name": name,
+                        "juice_shop_category": category,
+                        "cwe_id": cwe_str,
+                        "cwe_name": name
+                    }
+
                     # Aynı zafiyetin tekrar eklenmesini önlemek için kontrol eder
+                    if vuln_entry not in vulnerabilities:
+                        vulnerabilities.append(vuln_entry)
+
+        except json.JSONDecodeError:
+            print("Hata: zap_baseline.json dosyası geçerli bir JSON formatında değil.")
+
+# Trivy Verilerini Oku ve Ekle (CweIDs anahtarı doğru hiyerarşiyle okunuyor)
+if os.path.exists(trivy_path):
+    with open(trivy_path, "r", encoding="utf-8") as f:
+        try:
+            trivy_data = json.load(f)
+            results = trivy_data.get("Results", [])
+            for result in results:
+                vulns = result.get("Vulnerabilities", [])
+                if vulns is None:
+                    vulns = []
+                for vuln in vulns:
+                    name = vuln.get("Title") or "Unknown Trivy Vulnerability"
+
+                    # Trivy çıktısındaki doğru anahtar: "CweIDs"
+                    cwe_list = vuln.get("CweIDs", [])
+                    if not cwe_list or not isinstance(cwe_list, list) or len(cwe_list) == 0:
+                        continue
+
+                    cwe_str = cwe_list[0]
 
                     category = get_juice_shop_category(cwe_str, name)
 
@@ -75,11 +112,13 @@ if os.path.exists(zap_path):
                         "cwe_id": cwe_str,
                         "cwe_name": name
                     }
+
+                    # Aynı zafiyetin tekrar eklenmesini önlemek için kontrol eder
                     if vuln_entry not in vulnerabilities:
                         vulnerabilities.append(vuln_entry)
 
         except json.JSONDecodeError:
-            print("Hata: zap_baseline.json dosyası geçerli bir JSON formatında değil.")
+            print("Hata: trivy.json dosyası geçerli bir JSON formatında değil.")
 
 # CSV klasörünü oluşturur ve verileri yazdırır
 os.makedirs("inventory", exist_ok=True)
@@ -88,4 +127,4 @@ with open(output_csv, "w", newline="", encoding="utf-8") as f:
     writer.writeheader()
     writer.writerows(vulnerabilities)
 
-print(f"Başarılı! {len(vulnerabilities)} adet zafiyet {output_csv} dosyasına kaydedildi.")
+print(f"Başarılı! Toplam {len(vulnerabilities)} adet zafiyet (ZAP + Trivy) {output_csv} dosyasına kaydedildi.")
