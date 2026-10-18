@@ -1,0 +1,1312 @@
+[
+    {
+        "id": "node_entry_login",
+        "type": "entry_point",
+        "name": "Login Ucu",
+        "description": "Kullanici giris noktasi"
+    },
+    {
+        "id": "node_entry_search",
+        "type": "entry_point",
+        "name": "Arama Ucu",
+        "description": "Urun ve icerik arama noktasi"
+    },
+    {
+        "id": "node_entry_api",
+        "type": "entry_point",
+        "name": "REST API Endpoint",
+        "description": "Disa acik API arayuzu"
+    },
+    {
+        "id": "node_vuln_1",
+        "type": "vulnerability",
+        "name": "Content Security Policy (CSP) Header Not Set",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-693",
+        "description": "CWE-693 - Content Security Policy (CSP) Header Not Set (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_2",
+        "type": "vulnerability",
+        "name": "Cross-Domain Misconfiguration",
+        "category": "Broken Access Control",
+        "cwe_id": "CWE-264",
+        "description": "CWE-264 - Cross-Domain Misconfiguration (Broken Access Control)"
+    },
+    {
+        "id": "node_vuln_3",
+        "type": "vulnerability",
+        "name": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-693",
+        "description": "CWE-693 - Cross-Origin-Embedder-Policy Header Missing or Invalid (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_4",
+        "type": "vulnerability",
+        "name": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-693",
+        "description": "CWE-693 - Cross-Origin-Opener-Policy Header Missing or Invalid (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_5",
+        "type": "vulnerability",
+        "name": "Dangerous JS Functions",
+        "category": "Injection",
+        "cwe_id": "CWE-749",
+        "description": "CWE-749 - Dangerous JS Functions (Injection)"
+    },
+    {
+        "id": "node_vuln_6",
+        "type": "vulnerability",
+        "name": "Deprecated Feature Policy Header Set",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-16",
+        "description": "CWE-16 - Deprecated Feature Policy Header Set (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_7",
+        "type": "vulnerability",
+        "name": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-497",
+        "description": "CWE-497 - Server Leaks Version Information via \"Server\" HTTP Response Header Field (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_8",
+        "type": "vulnerability",
+        "name": "Timestamp Disclosure - Unix",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-497",
+        "description": "CWE-497 - Timestamp Disclosure - Unix (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_9",
+        "type": "vulnerability",
+        "name": "Modern Web Application",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-Unknown",
+        "description": "CWE-Unknown - Modern Web Application (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_10",
+        "type": "vulnerability",
+        "name": "Non-Storable Content",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-524",
+        "description": "CWE-524 - Non-Storable Content (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_11",
+        "type": "vulnerability",
+        "name": "Storable and Cacheable Content",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-524",
+        "description": "CWE-524 - Storable and Cacheable Content (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_12",
+        "type": "vulnerability",
+        "name": "Storable but Non-Cacheable Content",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-524",
+        "description": "CWE-524 - Storable but Non-Cacheable Content (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_13",
+        "type": "vulnerability",
+        "name": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-825",
+        "description": "CWE-825 - gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_14",
+        "type": "vulnerability",
+        "name": "gcc: libstdc++ integer overflow in `new` operator",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-190",
+        "description": "CWE-190 - gcc: libstdc++ integer overflow in `new` operator (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_15",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-787",
+        "description": "CWE-787 - glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_16",
+        "type": "vulnerability",
+        "name": "glibc: Buffer Overflow in strfmon right-justification padding",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-122",
+        "description": "CWE-122 - glibc: Buffer Overflow in strfmon right-justification padding (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_17",
+        "type": "vulnerability",
+        "name": "glibc: Fix out-of-bounds array write in tdelete",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-121",
+        "description": "CWE-121 - glibc: Fix out-of-bounds array write in tdelete (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_18",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Out-of-bounds write via TSIG record processing",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-787",
+        "description": "CWE-787 - glibc: glibc: Out-of-bounds write via TSIG record processing (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_19",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc` format specifier and large width",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-122",
+        "description": "CWE-122 - glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc` format specifier and large width (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_20",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Information disclosure or denial of service via ungetwc function with specific wide character encodings",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-127",
+        "description": "CWE-127 - glibc: glibc: Information disclosure or denial of service via ungetwc function with specific wide character encodings (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_21",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Application crash or uninitialized memory read via crafted DNS response",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-126",
+        "description": "CWE-126 - glibc: glibc: Application crash or uninitialized memory read via crafted DNS response (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_22",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Process abort due to invalid memory in wordexp",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-908",
+        "description": "CWE-908 - glibc: glibc: Process abort due to invalid memory in wordexp (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_23",
+        "type": "vulnerability",
+        "name": "glibc: Glibc: Denial of Service via stack exhaustion during tilde expansion",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-121",
+        "description": "CWE-121 - glibc: Glibc: Denial of Service via stack exhaustion during tilde expansion (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_24",
+        "type": "vulnerability",
+        "name": "glibc: Non-progress DoS in SHIFT_JISX0213 -&gt",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-835",
+        "description": "CWE-835 - glibc: Non-progress DoS in SHIFT_JISX0213 -&gt (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_25",
+        "type": "vulnerability",
+        "name": "glibc: Non-progress DoS in EUC_JISX0213 -> UCS-4 conversion state",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-835",
+        "description": "CWE-835 - glibc: Non-progress DoS in EUC_JISX0213 -> UCS-4 conversion state (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_26",
+        "type": "vulnerability",
+        "name": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-617",
+        "description": "CWE-617 - glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_27",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-367",
+        "description": "CWE-367 - glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_28",
+        "type": "vulnerability",
+        "name": "glibc: nscd stack overflow leads to degraded DNS resolution",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-789",
+        "description": "CWE-789 - glibc: nscd stack overflow leads to degraded DNS resolution (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_29",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow.",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-121",
+        "description": "CWE-121 - glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow. (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_30",
+        "type": "vulnerability",
+        "name": "glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-399",
+        "description": "CWE-399 - glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_31",
+        "type": "vulnerability",
+        "name": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-674",
+        "description": "CWE-674 - glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_32",
+        "type": "vulnerability",
+        "name": "glibc: stack guard protection bypass",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-119",
+        "description": "CWE-119 - glibc: stack guard protection bypass (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_33",
+        "type": "vulnerability",
+        "name": "glibc: ASLR bypass using cache of thread stack and heap",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-200",
+        "description": "CWE-200 - glibc: ASLR bypass using cache of thread stack and heap (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_34",
+        "type": "vulnerability",
+        "name": "glibc: information disclosure of heap addresses of pthread_created thread",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-330",
+        "description": "CWE-330 - glibc: information disclosure of heap addresses of pthread_created thread (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_35",
+        "type": "vulnerability",
+        "name": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-126",
+        "description": "CWE-126 - glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_36",
+        "type": "vulnerability",
+        "name": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_37",
+        "type": "vulnerability",
+        "name": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_38",
+        "type": "vulnerability",
+        "name": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-125",
+        "description": "CWE-125 - openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_39",
+        "type": "vulnerability",
+        "name": "openssl: QUIC server may trigger double free when processing INITIAL packet",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-415",
+        "description": "CWE-415 - openssl: QUIC server may trigger double free when processing INITIAL packet (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_40",
+        "type": "vulnerability",
+        "name": "openssl: openssl: Denial of Service via inefficient QUIC stream reassembly",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-407",
+        "description": "CWE-407 - openssl: openssl: Denial of Service via inefficient QUIC stream reassembly (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_41",
+        "type": "vulnerability",
+        "name": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-208",
+        "description": "CWE-208 - openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_42",
+        "type": "vulnerability",
+        "name": "openssl: openssl: Denial of Service via excessive QUIC packet buffer retention",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - openssl: openssl: Denial of Service via excessive QUIC packet buffer retention (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_43",
+        "type": "vulnerability",
+        "name": "openssl: openssl: information disclosure via non-constant-time SM2 scalar multiplication on ARM64 and RISC-V",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-208",
+        "description": "CWE-208 - openssl: openssl: information disclosure via non-constant-time SM2 scalar multiplication on ARM64 and RISC-V (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_44",
+        "type": "vulnerability",
+        "name": "openssl: heap buffer overflow in CMS key unwrapping",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-787",
+        "description": "CWE-787 - openssl: heap buffer overflow in CMS key unwrapping (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_45",
+        "type": "vulnerability",
+        "name": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-476",
+        "description": "CWE-476 - openssl: invalid pointer dereference in CMP server via crafted protectionAlg (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_46",
+        "type": "vulnerability",
+        "name": "openssl: openssl: Denial of Service via out-of-bounds write during TLS context switch",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-787",
+        "description": "CWE-787 - openssl: openssl: Denial of Service via out-of-bounds write during TLS context switch (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_47",
+        "type": "vulnerability",
+        "name": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-476",
+        "description": "CWE-476 - openssl: openssl: Denial of Service via crafted CMP certificate revocation response (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_48",
+        "type": "vulnerability",
+        "name": "openssl: OpenSSL: Denial of Service via undersized DTLS record",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1284",
+        "description": "CWE-1284 - openssl: OpenSSL: Denial of Service via undersized DTLS record (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_49",
+        "type": "vulnerability",
+        "name": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-208",
+        "description": "CWE-208 - openssl: OpenSSL: Private key recovery via SM2 timing side-channel (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_50",
+        "type": "vulnerability",
+        "name": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_51",
+        "type": "vulnerability",
+        "name": "openssl: RPK server signature algorithm selection can dereference a missing certificate",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-476",
+        "description": "CWE-476 - openssl: RPK server signature algorithm selection can dereference a missing certificate (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_52",
+        "type": "vulnerability",
+        "name": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_53",
+        "type": "vulnerability",
+        "name": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-440",
+        "description": "CWE-440 - openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_54",
+        "type": "vulnerability",
+        "name": "openssl: excessive memory use buffering DTLS records for a future epoch",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-405",
+        "description": "CWE-405 - openssl: excessive memory use buffering DTLS records for a future epoch (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_55",
+        "type": "vulnerability",
+        "name": "openssl: untrusted sender DN used as format string in CMP response validation",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-134",
+        "description": "CWE-134 - openssl: untrusted sender DN used as format string in CMP response validation (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_56",
+        "type": "vulnerability",
+        "name": "openssl: CMP indefinite cache growth of ExtraCerts",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - openssl: CMP indefinite cache growth of ExtraCerts (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_57",
+        "type": "vulnerability",
+        "name": "openssl: QUIC ACK-only packet retention can cause memory exhaustion",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - openssl: QUIC ACK-only packet retention can cause memory exhaustion (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_58",
+        "type": "vulnerability",
+        "name": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-354",
+        "description": "CWE-354 - openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher() (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_59",
+        "type": "vulnerability",
+        "name": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1284",
+        "description": "CWE-1284 - zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_60",
+        "type": "vulnerability",
+        "name": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ...",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-787",
+        "description": "CWE-787 - zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ... (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_61",
+        "type": "vulnerability",
+        "name": "fastify/busboy: fastify/busboy: Denial of Service from crafted form-data headers",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-754",
+        "description": "CWE-754 - fastify/busboy: fastify/busboy: Denial of Service from crafted form-data headers (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_62",
+        "type": "vulnerability",
+        "name": "@fastify/busboy: @fastify/busboy: CRLF injection via multipart Content-Disposition filename and name",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-93",
+        "description": "CWE-93 - @fastify/busboy: @fastify/busboy: CRLF injection via multipart Content-Disposition filename and name (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_63",
+        "type": "vulnerability",
+        "name": "@tootallnate/once: @tootallnate/once: Denial of Service due to incorrect control flow scoping with AbortSignal",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-705",
+        "description": "CWE-705 - @tootallnate/once: @tootallnate/once: Denial of Service due to incorrect control flow scoping with AbortSignal (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_64",
+        "type": "vulnerability",
+        "name": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_65",
+        "type": "vulnerability",
+        "name": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_66",
+        "type": "vulnerability",
+        "name": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - brace-expansion: brace-expansion: Denial of Service via crafted brace patterns (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_67",
+        "type": "vulnerability",
+        "name": "compression: compression: Denial of Service via memory leak on premature response close",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-401",
+        "description": "CWE-401 - compression: compression: Denial of Service via memory leak on premature response close (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_68",
+        "type": "vulnerability",
+        "name": "cookie: cookie accepts cookie name, path, and domain with out of bounds characters",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-74",
+        "description": "CWE-74 - cookie: cookie accepts cookie name, path, and domain with out of bounds characters (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_69",
+        "type": "vulnerability",
+        "name": "crypto-js: PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-328",
+        "description": "CWE-328 - crypto-js: PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_70",
+        "type": "vulnerability",
+        "name": "crypto-js: crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-331",
+        "description": "CWE-331 - crypto-js: crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_71",
+        "type": "vulnerability",
+        "name": "decode-uri-component: decode-uri-component: Denial of Service via crafted input",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - decode-uri-component: decode-uri-component: Denial of Service via crafted input (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_72",
+        "type": "vulnerability",
+        "name": "@xhmikosr/decompress: Path traversal via symlink chain",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - @xhmikosr/decompress: Path traversal via symlink chain (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_73",
+        "type": "vulnerability",
+        "name": "decompress: @xhmikosr/decompress: Decompress: Arbitrary file read/write via crafted archive extraction",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - decompress: @xhmikosr/decompress: Decompress: Arbitrary file read/write via crafted archive extraction (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_74",
+        "type": "vulnerability",
+        "name": "decompress: Decompress: Arbitrary file write leading to remote code execution via crafted ZIP archive (Zip Slip)",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-29",
+        "description": "CWE-29 - decompress: Decompress: Arbitrary file write leading to remote code execution via crafted ZIP archive (Zip Slip) (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_75",
+        "type": "vulnerability",
+        "name": "decompress: Decompress: File disclosure and corruption via arbitrary hardlink creation",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-59",
+        "description": "CWE-59 - decompress: Decompress: File disclosure and corruption via arbitrary hardlink creation (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_76",
+        "type": "vulnerability",
+        "name": "socket.io: engine.io: Socket.IO: Denial of Service via invalid binary POST requests",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-404",
+        "description": "CWE-404 - socket.io: engine.io: Socket.IO: Denial of Service via invalid binary POST requests (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_77",
+        "type": "vulnerability",
+        "name": "engine.io: Specially crafted HTTP request can trigger an uncaught exception",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - engine.io: Specially crafted HTTP request can trigger an uncaught exception (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_78",
+        "type": "vulnerability",
+        "name": "Authorization bypass in express-jwt",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-285",
+        "description": "CWE-285 - Authorization bypass in express-jwt (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_79",
+        "type": "vulnerability",
+        "name": "file-type: file-type: Denial of Service due to infinite loop in ASF file parsing",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-835",
+        "description": "CWE-835 - file-type: file-type: Denial of Service due to infinite loop in ASF file parsing (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_80",
+        "type": "vulnerability",
+        "name": "http-cache-semantics: Regular Expression Denial of Service (ReDoS) vulnerability",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-1333",
+        "description": "CWE-1333 - http-cache-semantics: Regular Expression Denial of Service (ReDoS) vulnerability (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_81",
+        "type": "vulnerability",
+        "name": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-524",
+        "description": "CWE-524 - http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_82",
+        "type": "vulnerability",
+        "name": "ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-918",
+        "description": "CWE-918 - ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_83",
+        "type": "vulnerability",
+        "name": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_84",
+        "type": "vulnerability",
+        "name": "ip-address: ip-address: Access control bypass via cross-family subnet comparison",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-697",
+        "description": "CWE-697 - ip-address: ip-address: Access control bypass via cross-family subnet comparison (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_85",
+        "type": "vulnerability",
+        "name": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-697",
+        "description": "CWE-697 - ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_86",
+        "type": "vulnerability",
+        "name": "js-yaml: js-yaml: Denial of Service vulnerability in YAML parsing",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - js-yaml: js-yaml: Denial of Service vulnerability in YAML parsing (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_87",
+        "type": "vulnerability",
+        "name": "nodejs-jsonwebtoken: verification step bypass with an altered token",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-20",
+        "description": "CWE-20 - nodejs-jsonwebtoken: verification step bypass with an altered token (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_88",
+        "type": "vulnerability",
+        "name": "jsonwebtoken: Unrestricted key type could lead to legacy keys usagen",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-327",
+        "description": "CWE-327 - jsonwebtoken: Unrestricted key type could lead to legacy keys usagen (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_89",
+        "type": "vulnerability",
+        "name": "jsonwebtoken: Insecure default algorithm in jwt.verify() could lead to signature validation bypass",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-287",
+        "description": "CWE-287 - jsonwebtoken: Insecure default algorithm in jwt.verify() could lead to signature validation bypass (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_90",
+        "type": "vulnerability",
+        "name": "jsonwebtoken: Insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-287",
+        "description": "CWE-287 - jsonwebtoken: Insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_91",
+        "type": "vulnerability",
+        "name": "node-jws: auth0/node-jws: Improper signature verification in HS256 algorithm",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-347",
+        "description": "CWE-347 - node-jws: auth0/node-jws: Improper signature verification in HS256 algorithm (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_92",
+        "type": "vulnerability",
+        "name": "nodejs-lodash: prototype pollution in defaultsDeep function leading to modifying properties",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1321",
+        "description": "CWE-1321 - nodejs-lodash: prototype pollution in defaultsDeep function leading to modifying properties (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_93",
+        "type": "vulnerability",
+        "name": "lodash: Prototype pollution in utilities function",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - lodash: Prototype pollution in utilities function (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_94",
+        "type": "vulnerability",
+        "name": "nodejs-lodash: command injection via template",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-94",
+        "description": "CWE-94 - nodejs-lodash: command injection via template (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_95",
+        "type": "vulnerability",
+        "name": "lodash: Lodash: Prototype pollution allows deletion of built-in prototype properties via array path bypass",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1321",
+        "description": "CWE-1321 - lodash: Lodash: Prototype pollution allows deletion of built-in prototype properties via array path bypass (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_96",
+        "type": "vulnerability",
+        "name": "lodash: Prototype pollution in utilities function",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-471",
+        "description": "CWE-471 - lodash: Prototype pollution in utilities function (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_97",
+        "type": "vulnerability",
+        "name": "messageformat has a prototype pollution vulnerability",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1321",
+        "description": "CWE-1321 - messageformat has a prototype pollution vulnerability (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_98",
+        "type": "vulnerability",
+        "name": "minimatch: minimatch: Denial of Service via specially crafted glob patterns",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1333",
+        "description": "CWE-1333 - minimatch: minimatch: Denial of Service via specially crafted glob patterns (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_99",
+        "type": "vulnerability",
+        "name": "minimatch: minimatch: Denial of Service due to unbounded recursive backtracking via crafted glob patterns",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-407",
+        "description": "CWE-407 - minimatch: minimatch: Denial of Service due to unbounded recursive backtracking via crafted glob patterns (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_100",
+        "type": "vulnerability",
+        "name": "minimatch: Minimatch: Denial of Service via catastrophic backtracking in glob expressions",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1333",
+        "description": "CWE-1333 - minimatch: Minimatch: Denial of Service via catastrophic backtracking in glob expressions (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_101",
+        "type": "vulnerability",
+        "name": "nodejs-moment: Regular expression denial of service",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - nodejs-moment: Regular expression denial of service (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_102",
+        "type": "vulnerability",
+        "name": "Moment.js: Path traversal  in moment.locale",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - Moment.js: Path traversal  in moment.locale (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_103",
+        "type": "vulnerability",
+        "name": "moment.js: regular expression denial of service",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - moment.js: regular expression denial of service (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_104",
+        "type": "vulnerability",
+        "name": "moment: Moment: Path Traversal via crafted non-string input to locale function",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-27",
+        "description": "CWE-27 - moment: Moment: Path Traversal via crafted non-string input to locale function (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_105",
+        "type": "vulnerability",
+        "name": "morgan: morgan: Log Forging via unescaped Unicode line separators",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-117",
+        "description": "CWE-117 - morgan: morgan: Log Forging via unescaped Unicode line separators (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_106",
+        "type": "vulnerability",
+        "name": "morgan: morgan: Log Injection via unescaped double quote in log fields",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-117",
+        "description": "CWE-117 - morgan: morgan: Log Injection via unescaped double quote in log fields (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_107",
+        "type": "vulnerability",
+        "name": "Multer vulnerable to Denial of Service via memory leaks from unclosed streams",
+        "category": "Sensitive Data Exposure",
+        "cwe_id": "CWE-401",
+        "description": "CWE-401 - Multer vulnerable to Denial of Service via memory leaks from unclosed streams (Sensitive Data Exposure)"
+    },
+    {
+        "id": "node_vuln_108",
+        "type": "vulnerability",
+        "name": "Multer vulnerable to Denial of Service from maliciously crafted requests",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - Multer vulnerable to Denial of Service from maliciously crafted requests (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_109",
+        "type": "vulnerability",
+        "name": "multer: Multer vulnerable to Denial of Service via unhandled exception",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - multer: Multer vulnerable to Denial of Service via unhandled exception (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_110",
+        "type": "vulnerability",
+        "name": "multer: Multer Denial of Service",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - multer: Multer Denial of Service (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_111",
+        "type": "vulnerability",
+        "name": "multer: Multer: Denial of Service via dropped file upload connections",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-772",
+        "description": "CWE-772 - multer: Multer: Denial of Service via dropped file upload connections (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_112",
+        "type": "vulnerability",
+        "name": "multer: Multer: Denial of Service via malformed requests",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-459",
+        "description": "CWE-459 - multer: Multer: Denial of Service via malformed requests (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_113",
+        "type": "vulnerability",
+        "name": "multer: Multer: Denial of Service via malformed requests",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-674",
+        "description": "CWE-674 - multer: Multer: Denial of Service via malformed requests (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_114",
+        "type": "vulnerability",
+        "name": "multer: Multer: Denial of Service via deeply nested field names in multipart form data",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - multer: Multer: Denial of Service via deeply nested field names in multipart form data (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_115",
+        "type": "vulnerability",
+        "name": "multer: Multer: Denial of Service via crafted multipart field names",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - multer: Multer: Denial of Service via crafted multipart field names (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_116",
+        "type": "vulnerability",
+        "name": "multer: Multer: Denial of Service via oversized array index in field names",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - multer: Multer: Denial of Service via oversized array index in field names (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_117",
+        "type": "vulnerability",
+        "name": "multer: Multer: File size limit bypass via asynchronous file filter race condition",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-362",
+        "description": "CWE-362 - multer: Multer: File size limit bypass via asynchronous file filter race condition (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_118",
+        "type": "vulnerability",
+        "name": "Sandbox escape in notevil and argencoders-notevil",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1321",
+        "description": "CWE-1321 - Sandbox escape in notevil and argencoders-notevil (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_119",
+        "type": "vulnerability",
+        "name": "proxy-addr is a Node.js module that determines a request's client addr ...",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-290",
+        "description": "CWE-290 - proxy-addr is a Node.js module that determines a request's client addr ... (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_120",
+        "type": "vulnerability",
+        "name": "qs: qs: Denial of Service via improper validation in stringify function",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - qs: qs: Denial of Service via improper validation in stringify function (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_121",
+        "type": "vulnerability",
+        "name": "qs: qs: Denial of Service via array limit bypass in query string parsing",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - qs: qs: Denial of Service via array limit bypass in query string parsing (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_122",
+        "type": "vulnerability",
+        "name": "sanitize-html: insecure global regular expression replacement logic may lead to ReDoS",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1333",
+        "description": "CWE-1333 - sanitize-html: insecure global regular expression replacement logic may lead to ReDoS (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_123",
+        "type": "vulnerability",
+        "name": "XSS - Sanitization not applied recursively",
+        "category": "Cross-Site Scripting (XSS)",
+        "cwe_id": "CWE-79",
+        "description": "CWE-79 - XSS - Sanitization not applied recursively (Cross-Site Scripting (XSS))"
+    },
+    {
+        "id": "node_vuln_124",
+        "type": "vulnerability",
+        "name": "Cross-Site Scripting in sanitize-html",
+        "category": "Cross-Site Scripting (XSS)",
+        "cwe_id": "CWE-79",
+        "description": "CWE-79 - Cross-Site Scripting in sanitize-html (Cross-Site Scripting (XSS))"
+    },
+    {
+        "id": "node_vuln_125",
+        "type": "vulnerability",
+        "name": "sanitize-html: sanitize-html cross site scripting",
+        "category": "Cross-Site Scripting (XSS)",
+        "cwe_id": "CWE-79",
+        "description": "CWE-79 - sanitize-html: sanitize-html cross site scripting (Cross-Site Scripting (XSS))"
+    },
+    {
+        "id": "node_vuln_126",
+        "type": "vulnerability",
+        "name": "sanitize-html: Information Exposure when used on the backend",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-200",
+        "description": "CWE-200 - sanitize-html: Information Exposure when used on the backend (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_127",
+        "type": "vulnerability",
+        "name": "ApostropheCMS: Mutation-XSS / allowedTags bypass via literal `</textarea/>` solidus close",
+        "category": "Cross-Site Scripting (XSS)",
+        "cwe_id": "CWE-79",
+        "description": "CWE-79 - ApostropheCMS: Mutation-XSS / allowedTags bypass via literal `</textarea/>` solidus close (Cross-Site Scripting (XSS))"
+    },
+    {
+        "id": "node_vuln_128",
+        "type": "vulnerability",
+        "name": "socket.io: Unhandled 'error' event",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-20",
+        "description": "CWE-20 - socket.io: Unhandled 'error' event (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_129",
+        "type": "vulnerability",
+        "name": "socket.io: Socket.IO: Denial of Service due to excessive buffering of specially crafted packets",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-20",
+        "description": "CWE-20 - socket.io: Socket.IO: Denial of Service due to excessive buffering of specially crafted packets (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_130",
+        "type": "vulnerability",
+        "name": "socket.io-parser: Socket.IO: Denial of Service via memory exhaustion from crafted packets",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-20",
+        "description": "CWE-20 - socket.io-parser: Socket.IO: Denial of Service via memory exhaustion from crafted packets (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_131",
+        "type": "vulnerability",
+        "name": "socket.io parser is a socket.io encoder and decoder written in JavaScr ...",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-20",
+        "description": "CWE-20 - socket.io parser is a socket.io encoder and decoder written in JavaScr ... (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_132",
+        "type": "vulnerability",
+        "name": "sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-1284",
+        "description": "CWE-1284 - sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_133",
+        "type": "vulnerability",
+        "name": "tar: node-tar: Denial of Service via crafted gzip bomb",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - tar: node-tar: Denial of Service via crafted gzip bomb (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_134",
+        "type": "vulnerability",
+        "name": "node-tar: tar: node-tar: Arbitrary file overwrite and symlink poisoning via unsanitized linkpaths in archives",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - node-tar: tar: node-tar: Arbitrary file overwrite and symlink poisoning via unsanitized linkpaths in archives (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_135",
+        "type": "vulnerability",
+        "name": "node-tar: tar: node-tar: Arbitrary file overwrite via Unicode path collision race condition",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-176",
+        "description": "CWE-176 - node-tar: tar: node-tar: Arbitrary file overwrite via Unicode path collision race condition (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_136",
+        "type": "vulnerability",
+        "name": "node-tar: tar: node-tar: Arbitrary file creation via path traversal bypass in hardlink security check",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - node-tar: tar: node-tar: Arbitrary file creation via path traversal bypass in hardlink security check (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_137",
+        "type": "vulnerability",
+        "name": "node-tar: node-tar: Arbitrary file read/write via malicious archive hardlink creation",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - node-tar: node-tar: Arbitrary file read/write via malicious archive hardlink creation (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_138",
+        "type": "vulnerability",
+        "name": "node-tar: hardlink path traversal via drive-relative linkpath",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - node-tar: hardlink path traversal via drive-relative linkpath (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_139",
+        "type": "vulnerability",
+        "name": "tar: tar: File overwrite via drive-relative symlink traversal",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-22",
+        "description": "CWE-22 - tar: tar: File overwrite via drive-relative symlink traversal (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_140",
+        "type": "vulnerability",
+        "name": "tar: Node-tar: Denial of Service via malformed tar archive header",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-835",
+        "description": "CWE-835 - tar: Node-tar: Denial of Service via malformed tar archive header (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_141",
+        "type": "vulnerability",
+        "name": "tar: node-tar: Denial of Service via crafted long-path tar archive",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - tar: node-tar: Denial of Service via crafted long-path tar archive (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_142",
+        "type": "vulnerability",
+        "name": "node-tar: node-tar: File smuggling due to inconsistent tar archive parsing",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-436",
+        "description": "CWE-436 - node-tar: node-tar: File smuggling due to inconsistent tar archive parsing (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_143",
+        "type": "vulnerability",
+        "name": "node-tar: node-tar: Denial of Service due to incorrect PAX path handling",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-704",
+        "description": "CWE-704 - node-tar: node-tar: Denial of Service due to incorrect PAX path handling (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_144",
+        "type": "vulnerability",
+        "name": "node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_145",
+        "type": "vulnerability",
+        "name": "undici: undici: Denial of Service due to unbounded memory growth via WebSocket frames",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - undici: undici: Denial of Service due to unbounded memory growth via WebSocket frames (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_146",
+        "type": "vulnerability",
+        "name": "undici: undici: Denial of Service via unbounded memory consumption during WebSocket permessage-deflate decompression",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-409",
+        "description": "CWE-409 - undici: undici: Denial of Service via unbounded memory consumption during WebSocket permessage-deflate decompression (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_147",
+        "type": "vulnerability",
+        "name": "undici: Undici: Denial of Service via invalid WebSocket permessage-deflate extension parameter",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-248",
+        "description": "CWE-248 - undici: Undici: Denial of Service via invalid WebSocket permessage-deflate extension parameter (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_148",
+        "type": "vulnerability",
+        "name": "undici: undici: HTTP header injection via unvalidated blob-like body type property",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-93",
+        "description": "CWE-93 - undici: undici: HTTP header injection via unvalidated blob-like body type property (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_149",
+        "type": "vulnerability",
+        "name": "undici: Undici: HTTP Request Smuggling and Denial of Service due to duplicate Content-Length headers",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-444",
+        "description": "CWE-444 - undici: Undici: HTTP Request Smuggling and Denial of Service due to duplicate Content-Length headers (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_150",
+        "type": "vulnerability",
+        "name": "undici: Undici: HTTP header injection and request smuggling vulnerability",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-93",
+        "description": "CWE-93 - undici: Undici: HTTP header injection and request smuggling vulnerability (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_151",
+        "type": "vulnerability",
+        "name": "undici: undici: Response desynchronization via retry interceptor with mismatched Content-Length",
+        "category": "Cryptographic Failures",
+        "cwe_id": "CWE-444",
+        "description": "CWE-444 - undici: undici: Response desynchronization via retry interceptor with mismatched Content-Length (Cryptographic Failures)"
+    },
+    {
+        "id": "node_vuln_152",
+        "type": "vulnerability",
+        "name": "undici: Undici: Cookie attribute injection allows bypassing security protections",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-74",
+        "description": "CWE-74 - undici: Undici: Cookie attribute injection allows bypassing security protections (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_153",
+        "type": "vulnerability",
+        "name": "undici: Undici: Denial of Service via excessive decompression steps",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-770",
+        "description": "CWE-770 - undici: Undici: Denial of Service via excessive decompression steps (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_154",
+        "type": "vulnerability",
+        "name": "undici: undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-93",
+        "description": "CWE-93 - undici: undici vulnerable to HTTP header injection via Set-Cookie percent-decoding (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_155",
+        "type": "vulnerability",
+        "name": "undici: undici: Weakening of cookie SameSite policy due to incorrect parsing of Set-Cookie header",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-183",
+        "description": "CWE-183 - undici: undici: Weakening of cookie SameSite policy due to incorrect parsing of Set-Cookie header (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_156",
+        "type": "vulnerability",
+        "name": "undici: undici: HTTP response splitting via retry interceptor",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-444",
+        "description": "CWE-444 - undici: undici: HTTP response splitting via retry interceptor (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_157",
+        "type": "vulnerability",
+        "name": "undici: Undici: Response queue poisoning on reused keep-alive sockets can lead to incorrect response delivery.",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-367",
+        "description": "CWE-367 - undici: Undici: Response queue poisoning on reused keep-alive sockets can lead to incorrect response delivery. (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_158",
+        "type": "vulnerability",
+        "name": "uuid: uuid: Out-of-bounds write vulnerability impacts data integrity and confidentiality",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-787",
+        "description": "CWE-787 - uuid: uuid: Out-of-bounds write vulnerability impacts data integrity and confidentiality (Miscellaneous)"
+    },
+    {
+        "id": "node_vuln_159",
+        "type": "vulnerability",
+        "name": "nodejs-ws: denial of service when handling a request with many HTTP headers",
+        "category": "Security Misconfiguration",
+        "cwe_id": "CWE-476",
+        "description": "CWE-476 - nodejs-ws: denial of service when handling a request with many HTTP headers (Security Misconfiguration)"
+    },
+    {
+        "id": "node_vuln_160",
+        "type": "vulnerability",
+        "name": "ws: ws: Denial of Service via memory exhaustion from small WebSocket fragments",
+        "category": "Miscellaneous",
+        "cwe_id": "CWE-400",
+        "description": "CWE-400 - ws: ws: Denial of Service via memory exhaustion from small WebSocket fragments (Miscellaneous)"
+    },
+    {
+        "id": "node_target_data_leak",
+        "type": "target",
+        "name": "Veri Sızıntısı",
+        "description": "Kritik hassas verilerin ele geçirilmesi"
+    },
+    {
+        "id": "node_target_admin_access",
+        "type": "target",
+        "name": "Admin Erişimi",
+        "description": "Yönetici yetkilerinin ele geçirilmesi"
+    }
+]

@@ -11,3 +11,151 @@ Modern Web Application,Miscellaneous,CWE-Unknown,Modern Web Application
 Non-Storable Content,Cryptographic Failures,CWE-524,Non-Storable Content
 Storable and Cacheable Content,Cryptographic Failures,CWE-524,Storable and Cacheable Content
 Storable but Non-Cacheable Content,Cryptographic Failures,CWE-524,Storable but Non-Cacheable Content
+gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if,Miscellaneous,CWE-825,gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if
+gcc: libstdc++ integer overflow in `new` operator,Miscellaneous,CWE-190,gcc: libstdc++ integer overflow in `new` operator
+glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string,Miscellaneous,CWE-787,glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string
+glibc: Buffer Overflow in strfmon right-justification padding,Miscellaneous,CWE-122,glibc: Buffer Overflow in strfmon right-justification padding
+glibc: Fix out-of-bounds array write in tdelete,Miscellaneous,CWE-121,glibc: Fix out-of-bounds array write in tdelete
+glibc: glibc: Out-of-bounds write via TSIG record processing,Miscellaneous,CWE-787,glibc: glibc: Out-of-bounds write via TSIG record processing
+glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc` format specifier and large width,Miscellaneous,CWE-122,glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc` format specifier and large width
+glibc: glibc: Information disclosure or denial of service via ungetwc function with specific wide character encodings,Sensitive Data Exposure,CWE-127,glibc: glibc: Information disclosure or denial of service via ungetwc function with specific wide character encodings
+glibc: glibc: Application crash or uninitialized memory read via crafted DNS response,Miscellaneous,CWE-126,glibc: glibc: Application crash or uninitialized memory read via crafted DNS response
+glibc: glibc: Process abort due to invalid memory in wordexp,Miscellaneous,CWE-908,glibc: glibc: Process abort due to invalid memory in wordexp
+glibc: Glibc: Denial of Service via stack exhaustion during tilde expansion,Miscellaneous,CWE-121,glibc: Glibc: Denial of Service via stack exhaustion during tilde expansion
+glibc: Non-progress DoS in SHIFT_JISX0213 -&gt,Miscellaneous,CWE-835,glibc: Non-progress DoS in SHIFT_JISX0213 -&gt
+glibc: Non-progress DoS in EUC_JISX0213 -> UCS-4 conversion state,Miscellaneous,CWE-835,glibc: Non-progress DoS in EUC_JISX0213 -> UCS-4 conversion state
+glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration,Security Misconfiguration,CWE-617,glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration
+glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader,Miscellaneous,CWE-367,glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader
+glibc: nscd stack overflow leads to degraded DNS resolution,Miscellaneous,CWE-789,glibc: nscd stack overflow leads to degraded DNS resolution
+glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow.,Sensitive Data Exposure,CWE-121,glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow.
+glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions,Miscellaneous,CWE-399,glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions
+glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c,Miscellaneous,CWE-674,glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+glibc: stack guard protection bypass,Miscellaneous,CWE-119,glibc: stack guard protection bypass
+glibc: ASLR bypass using cache of thread stack and heap,Cryptographic Failures,CWE-200,glibc: ASLR bypass using cache of thread stack and heap
+glibc: information disclosure of heap addresses of pthread_created thread,Sensitive Data Exposure,CWE-330,glibc: information disclosure of heap addresses of pthread_created thread
+glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp,Miscellaneous,CWE-126,glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp
+openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server,Miscellaneous,CWE-770,openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server
+openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control,Miscellaneous,CWE-770,openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control
+openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission,Sensitive Data Exposure,CWE-125,openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission
+openssl: QUIC server may trigger double free when processing INITIAL packet,Miscellaneous,CWE-415,openssl: QUIC server may trigger double free when processing INITIAL packet
+openssl: openssl: Denial of Service via inefficient QUIC stream reassembly,Miscellaneous,CWE-407,openssl: openssl: Denial of Service via inefficient QUIC stream reassembly
+openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations,Miscellaneous,CWE-208,openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations
+openssl: openssl: Denial of Service via excessive QUIC packet buffer retention,Miscellaneous,CWE-770,openssl: openssl: Denial of Service via excessive QUIC packet buffer retention
+openssl: openssl: information disclosure via non-constant-time SM2 scalar multiplication on ARM64 and RISC-V,Sensitive Data Exposure,CWE-208,openssl: openssl: information disclosure via non-constant-time SM2 scalar multiplication on ARM64 and RISC-V
+openssl: heap buffer overflow in CMS key unwrapping,Miscellaneous,CWE-787,openssl: heap buffer overflow in CMS key unwrapping
+openssl: invalid pointer dereference in CMP server via crafted protectionAlg,Miscellaneous,CWE-476,openssl: invalid pointer dereference in CMP server via crafted protectionAlg
+openssl: openssl: Denial of Service via out-of-bounds write during TLS context switch,Miscellaneous,CWE-787,openssl: openssl: Denial of Service via out-of-bounds write during TLS context switch
+openssl: openssl: Denial of Service via crafted CMP certificate revocation response,Miscellaneous,CWE-476,openssl: openssl: Denial of Service via crafted CMP certificate revocation response
+openssl: OpenSSL: Denial of Service via undersized DTLS record,Miscellaneous,CWE-1284,openssl: OpenSSL: Denial of Service via undersized DTLS record
+openssl: OpenSSL: Private key recovery via SM2 timing side-channel,Miscellaneous,CWE-208,openssl: OpenSSL: Private key recovery via SM2 timing side-channel
+openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog,Miscellaneous,CWE-770,openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog
+openssl: RPK server signature algorithm selection can dereference a missing certificate,Miscellaneous,CWE-476,openssl: RPK server signature algorithm selection can dereference a missing certificate
+openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing,Miscellaneous,CWE-770,openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing
+openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting,Miscellaneous,CWE-440,openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting
+openssl: excessive memory use buffering DTLS records for a future epoch,Miscellaneous,CWE-405,openssl: excessive memory use buffering DTLS records for a future epoch
+openssl: untrusted sender DN used as format string in CMP response validation,Miscellaneous,CWE-134,openssl: untrusted sender DN used as format string in CMP response validation
+openssl: CMP indefinite cache growth of ExtraCerts,Cryptographic Failures,CWE-770,openssl: CMP indefinite cache growth of ExtraCerts
+openssl: QUIC ACK-only packet retention can cause memory exhaustion,Miscellaneous,CWE-770,openssl: QUIC ACK-only packet retention can cause memory exhaustion
+openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher(),Miscellaneous,CWE-354,openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()
+zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions,Miscellaneous,CWE-1284,zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions
+zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ...,Miscellaneous,CWE-787,zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ...
+fastify/busboy: fastify/busboy: Denial of Service from crafted form-data headers,Security Misconfiguration,CWE-754,fastify/busboy: fastify/busboy: Denial of Service from crafted form-data headers
+@fastify/busboy: @fastify/busboy: CRLF injection via multipart Content-Disposition filename and name,Cryptographic Failures,CWE-93,@fastify/busboy: @fastify/busboy: CRLF injection via multipart Content-Disposition filename and name
+@tootallnate/once: @tootallnate/once: Denial of Service due to incorrect control flow scoping with AbortSignal,Miscellaneous,CWE-705,@tootallnate/once: @tootallnate/once: Denial of Service due to incorrect control flow scoping with AbortSignal
+brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns,Miscellaneous,CWE-400,brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns
+brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns,Miscellaneous,CWE-400,brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns
+brace-expansion: brace-expansion: Denial of Service via crafted brace patterns,Miscellaneous,CWE-400,brace-expansion: brace-expansion: Denial of Service via crafted brace patterns
+compression: compression: Denial of Service via memory leak on premature response close,Sensitive Data Exposure,CWE-401,compression: compression: Denial of Service via memory leak on premature response close
+"cookie: cookie accepts cookie name, path, and domain with out of bounds characters",Miscellaneous,CWE-74,"cookie: cookie accepts cookie name, path, and domain with out of bounds characters"
+"crypto-js: PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard",Miscellaneous,CWE-328,"crypto-js: PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard"
+crypto-js: crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain,Miscellaneous,CWE-331,crypto-js: crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain
+decode-uri-component: decode-uri-component: Denial of Service via crafted input,Miscellaneous,CWE-400,decode-uri-component: decode-uri-component: Denial of Service via crafted input
+@xhmikosr/decompress: Path traversal via symlink chain,Miscellaneous,CWE-22,@xhmikosr/decompress: Path traversal via symlink chain
+decompress: @xhmikosr/decompress: Decompress: Arbitrary file read/write via crafted archive extraction,Miscellaneous,CWE-22,decompress: @xhmikosr/decompress: Decompress: Arbitrary file read/write via crafted archive extraction
+decompress: Decompress: Arbitrary file write leading to remote code execution via crafted ZIP archive (Zip Slip),Miscellaneous,CWE-29,decompress: Decompress: Arbitrary file write leading to remote code execution via crafted ZIP archive (Zip Slip)
+decompress: Decompress: File disclosure and corruption via arbitrary hardlink creation,Sensitive Data Exposure,CWE-59,decompress: Decompress: File disclosure and corruption via arbitrary hardlink creation
+socket.io: engine.io: Socket.IO: Denial of Service via invalid binary POST requests,Miscellaneous,CWE-404,socket.io: engine.io: Socket.IO: Denial of Service via invalid binary POST requests
+engine.io: Specially crafted HTTP request can trigger an uncaught exception,Miscellaneous,CWE-248,engine.io: Specially crafted HTTP request can trigger an uncaught exception
+Authorization bypass in express-jwt,Miscellaneous,CWE-285,Authorization bypass in express-jwt
+file-type: file-type: Denial of Service due to infinite loop in ASF file parsing,Miscellaneous,CWE-835,file-type: file-type: Denial of Service due to infinite loop in ASF file parsing
+http-cache-semantics: Regular Expression Denial of Service (ReDoS) vulnerability,Cryptographic Failures,CWE-1333,http-cache-semantics: Regular Expression Denial of Service (ReDoS) vulnerability
+http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive,Cryptographic Failures,CWE-524,http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive
+ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range,Miscellaneous,CWE-918,ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range
+ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing,Miscellaneous,CWE-400,ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing
+ip-address: ip-address: Access control bypass via cross-family subnet comparison,Miscellaneous,CWE-697,ip-address: ip-address: Access control bypass via cross-family subnet comparison
+ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation,Miscellaneous,CWE-697,ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation
+js-yaml: js-yaml: Denial of Service vulnerability in YAML parsing,Miscellaneous,CWE-400,js-yaml: js-yaml: Denial of Service vulnerability in YAML parsing
+nodejs-jsonwebtoken: verification step bypass with an altered token,Miscellaneous,CWE-20,nodejs-jsonwebtoken: verification step bypass with an altered token
+jsonwebtoken: Unrestricted key type could lead to legacy keys usagen,Miscellaneous,CWE-327,jsonwebtoken: Unrestricted key type could lead to legacy keys usagen
+jsonwebtoken: Insecure default algorithm in jwt.verify() could lead to signature validation bypass,Miscellaneous,CWE-287,jsonwebtoken: Insecure default algorithm in jwt.verify() could lead to signature validation bypass
+jsonwebtoken: Insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC,Miscellaneous,CWE-287,jsonwebtoken: Insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC
+node-jws: auth0/node-jws: Improper signature verification in HS256 algorithm,Miscellaneous,CWE-347,node-jws: auth0/node-jws: Improper signature verification in HS256 algorithm
+nodejs-lodash: prototype pollution in defaultsDeep function leading to modifying properties,Miscellaneous,CWE-1321,nodejs-lodash: prototype pollution in defaultsDeep function leading to modifying properties
+lodash: Prototype pollution in utilities function,Miscellaneous,CWE-400,lodash: Prototype pollution in utilities function
+nodejs-lodash: command injection via template,Miscellaneous,CWE-94,nodejs-lodash: command injection via template
+lodash: Lodash: Prototype pollution allows deletion of built-in prototype properties via array path bypass,Miscellaneous,CWE-1321,lodash: Lodash: Prototype pollution allows deletion of built-in prototype properties via array path bypass
+lodash: Prototype pollution in utilities function,Miscellaneous,CWE-471,lodash: Prototype pollution in utilities function
+messageformat has a prototype pollution vulnerability,Miscellaneous,CWE-1321,messageformat has a prototype pollution vulnerability
+minimatch: minimatch: Denial of Service via specially crafted glob patterns,Miscellaneous,CWE-1333,minimatch: minimatch: Denial of Service via specially crafted glob patterns
+minimatch: minimatch: Denial of Service due to unbounded recursive backtracking via crafted glob patterns,Miscellaneous,CWE-407,minimatch: minimatch: Denial of Service due to unbounded recursive backtracking via crafted glob patterns
+minimatch: Minimatch: Denial of Service via catastrophic backtracking in glob expressions,Miscellaneous,CWE-1333,minimatch: Minimatch: Denial of Service via catastrophic backtracking in glob expressions
+nodejs-moment: Regular expression denial of service,Miscellaneous,CWE-400,nodejs-moment: Regular expression denial of service
+Moment.js: Path traversal  in moment.locale,Miscellaneous,CWE-22,Moment.js: Path traversal  in moment.locale
+moment.js: regular expression denial of service,Miscellaneous,CWE-400,moment.js: regular expression denial of service
+moment: Moment: Path Traversal via crafted non-string input to locale function,Miscellaneous,CWE-27,moment: Moment: Path Traversal via crafted non-string input to locale function
+morgan: morgan: Log Forging via unescaped Unicode line separators,Miscellaneous,CWE-117,morgan: morgan: Log Forging via unescaped Unicode line separators
+morgan: morgan: Log Injection via unescaped double quote in log fields,Miscellaneous,CWE-117,morgan: morgan: Log Injection via unescaped double quote in log fields
+Multer vulnerable to Denial of Service via memory leaks from unclosed streams,Sensitive Data Exposure,CWE-401,Multer vulnerable to Denial of Service via memory leaks from unclosed streams
+Multer vulnerable to Denial of Service from maliciously crafted requests,Miscellaneous,CWE-248,Multer vulnerable to Denial of Service from maliciously crafted requests
+multer: Multer vulnerable to Denial of Service via unhandled exception,Miscellaneous,CWE-248,multer: Multer vulnerable to Denial of Service via unhandled exception
+multer: Multer Denial of Service,Miscellaneous,CWE-248,multer: Multer Denial of Service
+multer: Multer: Denial of Service via dropped file upload connections,Miscellaneous,CWE-772,multer: Multer: Denial of Service via dropped file upload connections
+multer: Multer: Denial of Service via malformed requests,Miscellaneous,CWE-459,multer: Multer: Denial of Service via malformed requests
+multer: Multer: Denial of Service via malformed requests,Miscellaneous,CWE-674,multer: Multer: Denial of Service via malformed requests
+multer: Multer: Denial of Service via deeply nested field names in multipart form data,Miscellaneous,CWE-400,multer: Multer: Denial of Service via deeply nested field names in multipart form data
+multer: Multer: Denial of Service via crafted multipart field names,Miscellaneous,CWE-248,multer: Multer: Denial of Service via crafted multipart field names
+multer: Multer: Denial of Service via oversized array index in field names,Miscellaneous,CWE-400,multer: Multer: Denial of Service via oversized array index in field names
+multer: Multer: File size limit bypass via asynchronous file filter race condition,Miscellaneous,CWE-362,multer: Multer: File size limit bypass via asynchronous file filter race condition
+Sandbox escape in notevil and argencoders-notevil,Miscellaneous,CWE-1321,Sandbox escape in notevil and argencoders-notevil
+proxy-addr is a Node.js module that determines a request's client addr ...,Miscellaneous,CWE-290,proxy-addr is a Node.js module that determines a request's client addr ...
+qs: qs: Denial of Service via improper validation in stringify function,Miscellaneous,CWE-248,qs: qs: Denial of Service via improper validation in stringify function
+qs: qs: Denial of Service via array limit bypass in query string parsing,Miscellaneous,CWE-770,qs: qs: Denial of Service via array limit bypass in query string parsing
+sanitize-html: insecure global regular expression replacement logic may lead to ReDoS,Miscellaneous,CWE-1333,sanitize-html: insecure global regular expression replacement logic may lead to ReDoS
+XSS - Sanitization not applied recursively,Cross-Site Scripting (XSS),CWE-79,XSS - Sanitization not applied recursively
+Cross-Site Scripting in sanitize-html,Cross-Site Scripting (XSS),CWE-79,Cross-Site Scripting in sanitize-html
+sanitize-html: sanitize-html cross site scripting,Cross-Site Scripting (XSS),CWE-79,sanitize-html: sanitize-html cross site scripting
+sanitize-html: Information Exposure when used on the backend,Miscellaneous,CWE-200,sanitize-html: Information Exposure when used on the backend
+ApostropheCMS: Mutation-XSS / allowedTags bypass via literal `</textarea/>` solidus close,Cross-Site Scripting (XSS),CWE-79,ApostropheCMS: Mutation-XSS / allowedTags bypass via literal `</textarea/>` solidus close
+socket.io: Unhandled 'error' event,Miscellaneous,CWE-20,socket.io: Unhandled 'error' event
+socket.io: Socket.IO: Denial of Service due to excessive buffering of specially crafted packets,Miscellaneous,CWE-20,socket.io: Socket.IO: Denial of Service due to excessive buffering of specially crafted packets
+socket.io-parser: Socket.IO: Denial of Service via memory exhaustion from crafted packets,Miscellaneous,CWE-20,socket.io-parser: Socket.IO: Denial of Service via memory exhaustion from crafted packets
+socket.io parser is a socket.io encoder and decoder written in JavaScr ...,Miscellaneous,CWE-20,socket.io parser is a socket.io encoder and decoder written in JavaScr ...
+sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers,Miscellaneous,CWE-1284,sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers
+tar: node-tar: Denial of Service via crafted gzip bomb,Miscellaneous,CWE-770,tar: node-tar: Denial of Service via crafted gzip bomb
+node-tar: tar: node-tar: Arbitrary file overwrite and symlink poisoning via unsanitized linkpaths in archives,Miscellaneous,CWE-22,node-tar: tar: node-tar: Arbitrary file overwrite and symlink poisoning via unsanitized linkpaths in archives
+node-tar: tar: node-tar: Arbitrary file overwrite via Unicode path collision race condition,Miscellaneous,CWE-176,node-tar: tar: node-tar: Arbitrary file overwrite via Unicode path collision race condition
+node-tar: tar: node-tar: Arbitrary file creation via path traversal bypass in hardlink security check,Miscellaneous,CWE-22,node-tar: tar: node-tar: Arbitrary file creation via path traversal bypass in hardlink security check
+node-tar: node-tar: Arbitrary file read/write via malicious archive hardlink creation,Miscellaneous,CWE-22,node-tar: node-tar: Arbitrary file read/write via malicious archive hardlink creation
+node-tar: hardlink path traversal via drive-relative linkpath,Miscellaneous,CWE-22,node-tar: hardlink path traversal via drive-relative linkpath
+tar: tar: File overwrite via drive-relative symlink traversal,Miscellaneous,CWE-22,tar: tar: File overwrite via drive-relative symlink traversal
+tar: Node-tar: Denial of Service via malformed tar archive header,Security Misconfiguration,CWE-835,tar: Node-tar: Denial of Service via malformed tar archive header
+tar: node-tar: Denial of Service via crafted long-path tar archive,Miscellaneous,CWE-400,tar: node-tar: Denial of Service via crafted long-path tar archive
+node-tar: node-tar: File smuggling due to inconsistent tar archive parsing,Miscellaneous,CWE-436,node-tar: node-tar: File smuggling due to inconsistent tar archive parsing
+node-tar: node-tar: Denial of Service due to incorrect PAX path handling,Miscellaneous,CWE-704,node-tar: node-tar: Denial of Service due to incorrect PAX path handling
+node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata,Miscellaneous,CWE-248,node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata
+undici: undici: Denial of Service due to unbounded memory growth via WebSocket frames,Miscellaneous,CWE-400,undici: undici: Denial of Service due to unbounded memory growth via WebSocket frames
+undici: undici: Denial of Service via unbounded memory consumption during WebSocket permessage-deflate decompression,Miscellaneous,CWE-409,undici: undici: Denial of Service via unbounded memory consumption during WebSocket permessage-deflate decompression
+undici: Undici: Denial of Service via invalid WebSocket permessage-deflate extension parameter,Miscellaneous,CWE-248,undici: Undici: Denial of Service via invalid WebSocket permessage-deflate extension parameter
+undici: undici: HTTP header injection via unvalidated blob-like body type property,Security Misconfiguration,CWE-93,undici: undici: HTTP header injection via unvalidated blob-like body type property
+undici: Undici: HTTP Request Smuggling and Denial of Service due to duplicate Content-Length headers,Security Misconfiguration,CWE-444,undici: Undici: HTTP Request Smuggling and Denial of Service due to duplicate Content-Length headers
+undici: Undici: HTTP header injection and request smuggling vulnerability,Security Misconfiguration,CWE-93,undici: Undici: HTTP header injection and request smuggling vulnerability
+undici: undici: Response desynchronization via retry interceptor with mismatched Content-Length,Cryptographic Failures,CWE-444,undici: undici: Response desynchronization via retry interceptor with mismatched Content-Length
+undici: Undici: Cookie attribute injection allows bypassing security protections,Miscellaneous,CWE-74,undici: Undici: Cookie attribute injection allows bypassing security protections
+undici: Undici: Denial of Service via excessive decompression steps,Miscellaneous,CWE-770,undici: Undici: Denial of Service via excessive decompression steps
+undici: undici vulnerable to HTTP header injection via Set-Cookie percent-decoding,Security Misconfiguration,CWE-93,undici: undici vulnerable to HTTP header injection via Set-Cookie percent-decoding
+undici: undici: Weakening of cookie SameSite policy due to incorrect parsing of Set-Cookie header,Security Misconfiguration,CWE-183,undici: undici: Weakening of cookie SameSite policy due to incorrect parsing of Set-Cookie header
+undici: undici: HTTP response splitting via retry interceptor,Miscellaneous,CWE-444,undici: undici: HTTP response splitting via retry interceptor
+undici: Undici: Response queue poisoning on reused keep-alive sockets can lead to incorrect response delivery.,Miscellaneous,CWE-367,undici: Undici: Response queue poisoning on reused keep-alive sockets can lead to incorrect response delivery.
+uuid: uuid: Out-of-bounds write vulnerability impacts data integrity and confidentiality,Miscellaneous,CWE-787,uuid: uuid: Out-of-bounds write vulnerability impacts data integrity and confidentiality
+nodejs-ws: denial of service when handling a request with many HTTP headers,Security Misconfiguration,CWE-476,nodejs-ws: denial of service when handling a request with many HTTP headers
+ws: ws: Denial of Service via memory exhaustion from small WebSocket fragments,Miscellaneous,CWE-400,ws: ws: Denial of Service via memory exhaustion from small WebSocket fragments
