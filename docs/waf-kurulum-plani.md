@@ -1,4 +1,4 @@
-# WAF Kurulum Planı (Hafta 5 için)
+git checkout main# WAF Kurulum Planı (Hafta 5 için)
 
 ## Amaç
 
