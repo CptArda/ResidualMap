@@ -1,6 +1,6 @@
 import csv
 
-INPUT_CSV = "inventory/inventory.csv"
+INPUT_CSV = "inventory/inventory_v1.0.csv"
 OUTPUT_CSV = "ai/features.csv"
 
 
@@ -41,6 +41,8 @@ def main():
         user_interaction = "Hayır" if vector_parts.get("UI") == "N" else "Evet"
 
         features.append({
+   
+            "vuln_id": r.get("vuln_id", ""),
             "cve_id": r.get("cve_id", ""),
             "name": r.get("name", ""),
             "cwe_id": r.get("cwe_id", ""),

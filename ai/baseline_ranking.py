@@ -25,8 +25,8 @@ def main():
     # Veriyi oku
     df = pd.read_csv(args.features)
 
-    # Gerekli sütunları kontrol et
-    required_cols = ["cve_id", "name", "cwe_id", "cvss_score"]
+ 
+    required_cols = ["vuln_id", "cve_id", "name", "cwe_id", "cvss_score"]
     missing = [col for col in required_cols if col not in df.columns]
 
     if missing:
@@ -43,10 +43,11 @@ def main():
     # Boş CVE kimliklerini boş metin olarak düzenle
     df["cve_id"] = df["cve_id"].fillna("").astype(str)
 
-    # CVSS yüksekten düşüğe; eşitlikte cve_id ve name
+    # CVSS yüksekten düşüğe; eşitlikte vuln_id (artık birincil anahtar olarak
+    # tutarlı ve tekrarlanabilir bir sıralama veriyor, isim/cve_id yerine)
     df = df.sort_values(
-        ["cvss_score", "cve_id", "name"],
-        ascending=[False, True, True]
+        ["cvss_score", "vuln_id"],
+        ascending=[False, True]
     ).reset_index(drop=True)
 
     # Aynı CVSS skorları aynı sırayı alır
@@ -58,9 +59,10 @@ def main():
 
     df["baseline_score"] = df["cvss_score"]
 
-    # Mevcut CSV yapısına uygun çıktı sütunları
+    # Mevcut CSV yapısına uygun çıktı sütunları (vuln_id en başta)
     cols = [
         "baseline_rank",
+        "vuln_id",
         "cve_id",
         "name",
         "cwe_id",

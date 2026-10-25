@@ -1,37 +1,37 @@
-baseline_rank,cve_id,name,cwe_id,baseline_score
-1,,Mass Assignment - admin kaydi (Admin Registration),CWE-915,9.8
-1,,SQL Injection - login formu (Login Admin),CWE-89,9.8
-1,CVE-2015-9235,jsonwebtoken 0.1.0 / 0.4.0 - CVE-2015-9235,CWE-20,9.8
-1,CVE-2019-1010022,libc6 2.41-12+deb13u3 - CVE-2019-1010022,CWE-119,9.8
-1,CVE-2026-5450,libc6 2.41-12+deb13u3 - CVE-2026-5450,CWE-122,9.8
-6,CVE-2019-10744,lodash 2.4.2 - CVE-2019-10744,CWE-1321,9.1
-6,CVE-2023-46233,crypto-js 3.3.0 - CVE-2023-46233,CWE-328,9.1
-6,CVE-2026-101894,decompress 4.2.1 - CVE-2026-101894,CWE-22,9.1
-6,CVE-2026-90711,proxy-addr 2.0.7 - CVE-2026-90711,CWE-290,9.1
-10,CVE-2026-71851,crypto-js 3.3.0 - CVE-2026-71851,CWE-331,9.0
-11,CVE-2026-23950,tar 6.2.1 - CVE-2026-23950,CWE-176,8.8
-12,,Zayif admin parolasi - brute force (Password Strength),CWE-521,8.1
-13,CVE-2020-15084,express-jwt 0.1.3 - CVE-2020-15084,CWE-285,7.7
-14,,Acikta kalan kimlik bilgileri (Exposed Credentials),CWE-798,7.5
-14,,Dizin listeleme - /ftp gizli dokuman (Confidential Document),CWE-548,7.5
-14,,UNION SQL Injection - urun arama (Database Schema),CWE-89,7.5
-14,CVE-2017-18214,moment 2.0.0 - CVE-2017-18214,CWE-400,7.5
-14,CVE-2022-24785,moment 2.0.0 - CVE-2022-24785,CWE-22,7.5
-14,CVE-2024-37890,ws 7.4.6 - CVE-2024-37890,CWE-476,7.5
-14,CVE-2025-47944,multer 1.4.5-lts.2 - CVE-2025-47944,CWE-248,7.5
-21,,Zayif guvenlik sorusu ile sifre sifirlama (Reset Jim's Password),CWE-640,7.4
-22,CVE-2021-23337,lodash 2.4.2 - CVE-2021-23337,CWE-94,7.2
-23,,IDOR - baska kullanicinin sepetini degistirme (Manipulate Basket),CWE-639,6.5
-23,,IDOR - baska kullanicinin sepetini gorme (View Basket),CWE-639,6.5
-23,,XXE - dosya okuma (XXE Data Access),CWE-611,6.5
-26,,API-only (Stored) XSS,CWE-79,6.1
-26,,Acik yonlendirme - eski allowlist (Outdated Allowlist),CWE-601,6.1
-26,,DOM XSS - arama kutusu,CWE-79,6.1
-26,,Reflected XSS - siparis takip,CWE-79,6.1
-30,,Ayrintili hata mesaji (Error Handling),CWE-209,5.3
-30,,Server basliginda surum bilgisi sizintisi,CWE-497,5.3
-32,,CSRF - profil islemi,CWE-352,4.3
-33,,CSP basligi yok,CWE-693,4.2
-33,,Tehlikeli JS fonksiyonlari,CWE-749,4.2
-35,,COOP/COEP basliklari eksik,CWE-693,3.1
-35,,Cross-Domain Misconfiguration (genis CORS),CWE-264,3.1
+baseline_rank,vuln_id,cve_id,name,cwe_id,baseline_score
+1,V001,,SQL Injection - login formu (Login Admin),CWE-89,9.8
+1,V008,,Mass Assignment - admin kaydi (Admin Registration),CWE-915,9.8
+1,V022,CVE-2015-9235,jsonwebtoken 0.1.0 / 0.4.0 - CVE-2015-9235,CWE-20,9.8
+1,V035,CVE-2026-5450,libc6 2.41-12+deb13u3 - CVE-2026-5450,CWE-122,9.8
+1,V036,CVE-2019-1010022,libc6 2.41-12+deb13u3 - CVE-2019-1010022,CWE-119,9.8
+6,V023,CVE-2019-10744,lodash 2.4.2 - CVE-2019-10744,CWE-1321,9.1
+6,V025,CVE-2023-46233,crypto-js 3.3.0 - CVE-2023-46233,CWE-328,9.1
+6,V027,CVE-2026-101894,decompress 4.2.1 - CVE-2026-101894,CWE-22,9.1
+6,V028,CVE-2026-90711,proxy-addr 2.0.7 - CVE-2026-90711,CWE-290,9.1
+10,V026,CVE-2026-71851,crypto-js 3.3.0 - CVE-2026-71851,CWE-331,9.0
+11,V029,CVE-2026-23950,tar 6.2.1 - CVE-2026-23950,CWE-176,8.8
+12,V015,,Zayif admin parolasi - brute force (Password Strength),CWE-521,8.1
+13,V030,CVE-2020-15084,express-jwt 0.1.3 - CVE-2020-15084,CWE-285,7.7
+14,V002,,UNION SQL Injection - urun arama (Database Schema),CWE-89,7.5
+14,V009,,Dizin listeleme - /ftp gizli dokuman (Confidential Document),CWE-548,7.5
+14,V014,,Acikta kalan kimlik bilgileri (Exposed Credentials),CWE-798,7.5
+14,V031,CVE-2022-24785,moment 2.0.0 - CVE-2022-24785,CWE-22,7.5
+14,V032,CVE-2017-18214,moment 2.0.0 - CVE-2017-18214,CWE-400,7.5
+14,V033,CVE-2024-37890,ws 7.4.6 - CVE-2024-37890,CWE-476,7.5
+14,V034,CVE-2025-47944,multer 1.4.5-lts.2 - CVE-2025-47944,CWE-248,7.5
+21,V011,,Zayif guvenlik sorusu ile sifre sifirlama (Reset Jim's Password),CWE-640,7.4
+22,V024,CVE-2021-23337,lodash 2.4.2 - CVE-2021-23337,CWE-94,7.2
+23,V006,,IDOR - baska kullanicinin sepetini gorme (View Basket),CWE-639,6.5
+23,V007,,IDOR - baska kullanicinin sepetini degistirme (Manipulate Basket),CWE-639,6.5
+23,V010,,XXE - dosya okuma (XXE Data Access),CWE-611,6.5
+26,V003,,Reflected XSS - siparis takip,CWE-79,6.1
+26,V004,,DOM XSS - arama kutusu,CWE-79,6.1
+26,V005,,API-only (Stored) XSS,CWE-79,6.1
+26,V013,,Acik yonlendirme - eski allowlist (Outdated Allowlist),CWE-601,6.1
+30,V016,,Ayrintili hata mesaji (Error Handling),CWE-209,5.3
+30,V019,,Server basliginda surum bilgisi sizintisi,CWE-497,5.3
+32,V012,,CSRF - profil islemi,CWE-352,4.3
+33,V017,,CSP basligi yok,CWE-693,4.2
+33,V020,,Tehlikeli JS fonksiyonlari,CWE-749,4.2
+35,V018,,Cross-Domain Misconfiguration (genis CORS),CWE-264,3.1
+35,V021,,COOP/COEP basliklari eksik,CWE-693,3.1
