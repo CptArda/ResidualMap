@@ -65,7 +65,7 @@ def create_visual_graph():
         if source and target:
             net.add_edge(source, target, title=edge_title, label=edge_label)
 
-    # v1 olarak kaydet
+
     net.save_graph(output_path)
     print(f"BAŞARILI! Aktif saldırı yolları ile Attack Graph v1 oluşturuldu: {output_path}")
 
