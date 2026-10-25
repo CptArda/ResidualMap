@@ -3,642 +3,636 @@
         "source": "node_entry_login",
         "target": "V001",
         "relation": "Entry Point",
-        "technique_name": "Initial Access via Authentication"
-    },
-    {
-        "source": "V001",
-        "target": "V002",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Initial Access via Authentication & Session"
     },
     {
         "source": "V001",
         "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Unauthorized Admin Access"
+        "technique_name": "Unauthorized Administrator Access"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V002",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V002",
-        "target": "V003",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V002",
         "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Sensitive Data Exfiltration"
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V003",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V003",
-        "target": "V004",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V003",
         "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Account Takeover & Unauthorized Action"
+        "technique_name": "Account Takeover via Client-Side Attack"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V004",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V004",
-        "target": "V005",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V004",
         "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Account Takeover & Unauthorized Action"
+        "technique_name": "Account Takeover via Client-Side Attack"
     },
     {
         "source": "node_entry_api",
         "target": "V005",
         "relation": "Entry Point",
-        "technique_name": "API Exposure & Interface Abuse"
-    },
-    {
-        "source": "V005",
-        "target": "V006",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "API Interface & Service Exposure"
     },
     {
         "source": "V005",
         "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Account Takeover & Unauthorized Action"
+        "technique_name": "Account Takeover via Client-Side Attack"
     },
     {
         "source": "node_entry_search",
         "target": "V006",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V006",
-        "target": "V007",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V006",
-        "target": "node_target_dos",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V007",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V007",
-        "target": "V008",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V007",
-        "target": "node_target_dos",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V008",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V008",
-        "target": "V009",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V008",
         "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Unauthorized Admin Access"
+        "technique_name": "Unauthorized Administrator Access"
     },
     {
         "source": "node_entry_search",
         "target": "V009",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V009",
-        "target": "V010",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V009",
-        "target": "node_target_dos",
+        "target": "node_target_rce",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to RCE"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V010",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V010",
-        "target": "V011",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V010",
         "target": "node_target_dos",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to DOS"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V011",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V011",
-        "target": "V012",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V011",
-        "target": "node_target_dos",
+        "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ADMIN"
     },
     {
         "source": "node_entry_search",
         "target": "V012",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V012",
-        "target": "V013",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V012",
         "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Account Takeover & Unauthorized Action"
+        "technique_name": "Account Takeover via Client-Side Attack"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V013",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V013",
-        "target": "V014",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V013",
-        "target": "node_target_dos",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Account Takeover via Client-Side Attack"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V014",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Initial Access via Authentication & Session"
     },
     {
         "source": "V014",
-        "target": "V015",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V014",
-        "target": "node_target_dos",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Account Takeover via Client-Side Attack"
     },
     {
         "source": "node_entry_login",
         "target": "V015",
         "relation": "Entry Point",
-        "technique_name": "Initial Access via Authentication"
-    },
-    {
-        "source": "V015",
-        "target": "V016",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Initial Access via Authentication & Session"
     },
     {
         "source": "V015",
         "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Unauthorized Admin Access"
+        "technique_name": "Unauthorized Administrator Access"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V016",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V016",
-        "target": "V017",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V016",
-        "target": "node_target_dos",
+        "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ADMIN"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V017",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V017",
-        "target": "V018",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V017",
-        "target": "node_target_dos",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to LEAK"
     },
     {
         "source": "node_entry_search",
         "target": "V018",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V018",
-        "target": "V019",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V018",
-        "target": "node_target_dos",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ACCOUNT_TAKEOVER"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V019",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V019",
-        "target": "V020",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V019",
-        "target": "node_target_dos",
+        "target": "node_target_rce",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to RCE"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V020",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V020",
-        "target": "V021",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V020",
         "target": "node_target_dos",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to DOS"
     },
     {
         "source": "node_entry_search",
         "target": "V021",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V021",
-        "target": "V022",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V021",
-        "target": "node_target_dos",
+        "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ADMIN"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V022",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V022",
-        "target": "V023",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V022",
-        "target": "node_target_dos",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to LEAK"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V023",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V023",
-        "target": "V024",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V023",
-        "target": "node_target_dos",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ACCOUNT_TAKEOVER"
     },
     {
         "source": "node_entry_search",
         "target": "V024",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V024",
-        "target": "V025",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V024",
-        "target": "node_target_dos",
+        "target": "node_target_rce",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Remote Code Execution & System Compromise"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V025",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V025",
-        "target": "V026",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V025",
         "target": "node_target_dos",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to DOS"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V026",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V026",
-        "target": "V027",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V026",
-        "target": "node_target_dos",
+        "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ADMIN"
     },
     {
         "source": "node_entry_search",
         "target": "V027",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V027",
-        "target": "V028",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V027",
-        "target": "node_target_dos",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V028",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "API Interface & Service Exposure"
     },
     {
         "source": "V028",
-        "target": "V029",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V028",
-        "target": "node_target_dos",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ACCOUNT_TAKEOVER"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V029",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V029",
-        "target": "V030",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V029",
-        "target": "node_target_dos",
+        "target": "node_target_rce",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to RCE"
     },
     {
         "source": "node_entry_search",
         "target": "V030",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V030",
-        "target": "V031",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V030",
         "target": "node_target_dos",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to DOS"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V031",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V031",
-        "target": "V032",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V031",
-        "target": "node_target_dos",
+        "target": "node_target_rce",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Remote Code Execution & System Compromise"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V032",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V032",
-        "target": "V033",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V032",
-        "target": "node_target_dos",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to LEAK"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V033",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "API Interface & Service Exposure"
     },
     {
         "source": "V033",
-        "target": "V034",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V033",
-        "target": "node_target_dos",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V034",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via LOGIN"
     },
     {
         "source": "V034",
-        "target": "V035",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
-    },
-    {
-        "source": "V034",
-        "target": "node_target_dos",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Account Takeover via Client-Side Attack"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_api",
         "target": "V035",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
-    },
-    {
-        "source": "V035",
-        "target": "V036",
-        "relation": "Chains To",
-        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+        "technique_name": "Vector via API"
     },
     {
         "source": "V035",
         "target": "node_target_dos",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to DOS"
     },
     {
         "source": "node_entry_search",
         "target": "V036",
         "relation": "Entry Point",
-        "technique_name": "User Input Vector"
+        "technique_name": "Vector via SEARCH"
     },
     {
         "source": "V036",
-        "target": "node_target_dos",
+        "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Denial of Service (DoS)"
+        "technique_name": "Impact leading to ADMIN"
+    },
+    {
+        "source": "V014",
+        "target": "V008",
+        "relation": "Chains To",
+        "technique_name": "Authentication Flaw Leading to Privilege Escalation"
+    },
+    {
+        "source": "V002",
+        "target": "V009",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V003",
+        "target": "V010",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V004",
+        "target": "V011",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V005",
+        "target": "V016",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V006",
+        "target": "V017",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V007",
+        "target": "V018",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V008",
+        "target": "V019",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V009",
+        "target": "V020",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V010",
+        "target": "V021",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V011",
+        "target": "V022",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V012",
+        "target": "V023",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V013",
+        "target": "V024",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V016",
+        "target": "V025",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V017",
+        "target": "V026",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V018",
+        "target": "V028",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V019",
+        "target": "V029",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V020",
+        "target": "V030",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V021",
+        "target": "V031",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V022",
+        "target": "V032",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V023",
+        "target": "V035",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V024",
+        "target": "V036",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V025",
+        "target": "V009",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V026",
+        "target": "V010",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V027",
+        "target": "V011",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V028",
+        "target": "V016",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V029",
+        "target": "V017",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V030",
+        "target": "V018",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V031",
+        "target": "V019",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V032",
+        "target": "V020",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V033",
+        "target": "V021",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V034",
+        "target": "V022",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V035",
+        "target": "V023",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
+    },
+    {
+        "source": "V036",
+        "target": "V024",
+        "relation": "Chains To",
+        "technique_name": "Input Vector Chaining to System Compromise"
     }
 ]
