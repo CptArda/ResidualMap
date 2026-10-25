@@ -3,246 +3,642 @@
         "source": "node_entry_login",
         "target": "V001",
         "relation": "Entry Point",
-        "technique_name": "Initial Access"
+        "technique_name": "Initial Access via Authentication"
+    },
+    {
+        "source": "V001",
+        "target": "V002",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
     },
     {
         "source": "V001",
         "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Privilege Escalation"
+        "technique_name": "Unauthorized Admin Access"
     },
     {
         "source": "node_entry_search",
         "target": "V002",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
     },
     {
         "source": "V002",
-        "target": "node_target_admin",
+        "target": "V003",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V002",
+        "target": "node_target_leak",
         "relation": "Leads To",
-        "technique_name": "Privilege Escalation"
+        "technique_name": "Sensitive Data Exfiltration"
     },
     {
         "source": "node_entry_search",
         "target": "V003",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
     },
     {
         "source": "V003",
-        "target": "node_target_leak",
+        "target": "V004",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V003",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Exfiltration"
+        "technique_name": "Account Takeover & Unauthorized Action"
     },
     {
         "source": "node_entry_search",
         "target": "V004",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
     },
     {
         "source": "V004",
-        "target": "node_target_leak",
+        "target": "V005",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V004",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Exfiltration"
+        "technique_name": "Account Takeover & Unauthorized Action"
     },
     {
         "source": "node_entry_api",
         "target": "V005",
         "relation": "Entry Point",
-        "technique_name": "API Exposure"
+        "technique_name": "API Exposure & Interface Abuse"
     },
     {
         "source": "V005",
-        "target": "node_target_leak",
+        "target": "V006",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V005",
+        "target": "node_target_account_takeover",
         "relation": "Leads To",
-        "technique_name": "Exfiltration"
+        "technique_name": "Account Takeover & Unauthorized Action"
     },
     {
         "source": "node_entry_search",
         "target": "V006",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V006",
+        "target": "V007",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V006",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V007",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V007",
+        "target": "V008",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V007",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V008",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V008",
+        "target": "V009",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V008",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Admin Access"
     },
     {
         "source": "node_entry_search",
         "target": "V009",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V009",
+        "target": "V010",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V009",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V010",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V010",
+        "target": "V011",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V010",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V011",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V011",
+        "target": "V012",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V011",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V012",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V012",
+        "target": "V013",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V012",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover & Unauthorized Action"
     },
     {
         "source": "node_entry_search",
         "target": "V013",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
     },
     {
-        "source": "node_entry_login",
+        "source": "V013",
+        "target": "V014",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V013",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
+    },
+    {
+        "source": "node_entry_search",
         "target": "V014",
         "relation": "Entry Point",
-        "technique_name": "Initial Access"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V014",
+        "target": "V015",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V014",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_login",
         "target": "V015",
         "relation": "Entry Point",
-        "technique_name": "Initial Access"
+        "technique_name": "Initial Access via Authentication"
+    },
+    {
+        "source": "V015",
+        "target": "V016",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V015",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Admin Access"
     },
     {
         "source": "node_entry_search",
         "target": "V016",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V016",
+        "target": "V017",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V016",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V017",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V017",
+        "target": "V018",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V017",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V018",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V018",
+        "target": "V019",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V018",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V019",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V019",
+        "target": "V020",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V019",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V020",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V020",
+        "target": "V021",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V020",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V021",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V021",
+        "target": "V022",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V021",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V022",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V022",
+        "target": "V023",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V022",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V023",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V023",
+        "target": "V024",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V023",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V024",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V024",
+        "target": "V025",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V024",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V025",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V025",
+        "target": "V026",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V025",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V026",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V026",
+        "target": "V027",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V026",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V027",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V027",
+        "target": "V028",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V027",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V028",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V028",
+        "target": "V029",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V028",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V029",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V029",
+        "target": "V030",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V029",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V030",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V030",
+        "target": "V031",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V030",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V031",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V031",
+        "target": "V032",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V031",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V032",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V032",
+        "target": "V033",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V032",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V033",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V033",
+        "target": "V034",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V033",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V034",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V034",
+        "target": "V035",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V034",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V035",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V035",
+        "target": "V036",
+        "relation": "Chains To",
+        "technique_name": "Lateral Movement / Privilege Escalation Chain"
+    },
+    {
+        "source": "V035",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     },
     {
         "source": "node_entry_search",
         "target": "V036",
         "relation": "Entry Point",
-        "technique_name": "User Input Exposure"
+        "technique_name": "User Input Vector"
+    },
+    {
+        "source": "V036",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service (DoS)"
     }
 ]
