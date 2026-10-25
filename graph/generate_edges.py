@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 
@@ -5,42 +6,53 @@ import os
 def generate_edges():
     # Çıkartılan düğümlerin okunması
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    nodes_path = os.path.abspath(os.path.join(current_dir, "../inventory/attack_graph_nodes.json"))
+    csv_path = os.path.abspath(os.path.join(current_dir, "../inventory/inventory_v1.0.csv"))
 
-    if not os.path.exists(nodes_path):
-        print(f"Düğüm dosyası bulunamadı! Aranan yol: {nodes_path}")
+    if not os.path.exists(csv_path):
+        print(f"CSV dosyası bulunamadı! Aranan yol: {csv_path}")
         return
 
-    with open(nodes_path, "r", encoding="utf-8") as f:
-        nodes = json.load(f)
+    # inventory_v1.0.csv verilerinin okunması
+    vulnerabilities = []
+    with open(csv_path, mode="r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            v_id = row.get("vuln_id", "").strip()
+            if not v_id:
+                continue
+            vulnerabilities.append({
+                "id": v_id,
+                "name": row.get("name", "").strip(),
+                "cwe_id": row.get("cwe_id", "").strip(),
+                "component": row.get("component", "").strip().lower(),
+                "cvss_score": row.get("cvss_score", "").strip()
+            })
 
     # Grupları ayırmak için açılan liste
     edges = []
 
     # Listeye eklenmesi için türlerine ayırma
-    entry_nodes = [n for n in nodes if n["type"] == "entry_point"]
-    vuln_nodes = [n for n in nodes if n["type"] == "vulnerability"]
-    target_nodes = [n for n in nodes if n["type"] == "target"]
-
     # 1. Tüm zafiyetleri ele alıp giriş noktalarından zafiyetlere bağlantı kurulumu
-    for v in vuln_nodes:
-        cat = v.get("category", "")
-        name = v.get("name", "").lower()
+    for v in vulnerabilities:
+        comp = v["component"]
+        cwe = v["cwe_id"].lower()
+        name = v["name"].lower()
+        v_id = v["id"]
 
         # Login ile ilişkili açıkları Login giriş noktasına bağla
-        if "login" in name or "authentication" in name.lower() or "session" in name.lower():
+        if "login" in comp or "auth" in comp or "session" in name or "login" in name or "user-registration" in comp:
             edges.append({
                 "source": "node_entry_login",
-                "target": v["id"],
+                "target": v_id,
                 "relation": "Triggers",
                 "mitre_technique": "T1190",
                 "technique_name": "Exploit Public-Facing Application"
             })
         # API / Injection açıklarını API giriş noktasına bağla
-        elif "api" in name or "injection" in cat.lower() or "xss" in cat.lower():
+        elif "api" in comp or "endpoint" in comp or "rest" in comp or "basket" in comp:
             edges.append({
                 "source": "node_entry_api",
-                "target": v["id"],
+                "target": v_id,
                 "relation": "Exploits Endpoint",
                 "mitre_technique": "T1190",
                 "technique_name": "Exploit Public-Facing Application"
@@ -49,21 +61,37 @@ def generate_edges():
         else:
             edges.append({
                 "source": "node_entry_search",
-                "target": v["id"],
+                "target": v_id,
                 "relation": "Accesses via Input",
                 "mitre_technique": "T1190",
                 "technique_name": "Exploit Public-Facing Application"
             })
 
+    # Zincirleme (çok adımlı) yolların eklenmesi (Zafiyet 1 -> Zafiyet 2)
+    primary_vulns = [v for v in vulnerabilities if "cwe-89" in v["cwe_id"].lower() or "cwe-79" in v["cwe_id"].lower() or "injection" in v["name"].lower()]
+    secondary_vulns = [v for v in vulnerabilities if "cwe-639" in v["cwe_id"].lower() or "cwe-285" in v["cwe_id"].lower() or "access" in v["name"].lower() or "privilege" in v["name"].lower()]
+
+    for p in primary_vulns:
+        for s in secondary_vulns:
+            if p["id"] != s["id"]:
+                edges.append({
+                    "source": p["id"],
+                    "target": s["id"],
+                    "relation": "Chains To / Enables",
+                    "mitre_technique": "T1068",
+                    "technique_name": "Exploitation for Privilege Escalation"
+                })
+
     # 2. Zafiyetlerden hedeflere bağlantı kurulumu
-    for v in vuln_nodes:
-        cat = v.get("category", "")
-        name = v.get("name", "").lower()
+    for v in vulnerabilities:
+        cwe = v["cwe_id"].lower()
+        name = v["name"].lower()
+        v_id = v["id"]
 
         # Yetkilendirme / Admin temalı açıklar -> Admin Erişimi hedefi ile eşlenir
-        if "admin" in name or "broken access" in cat.lower() or "privilege" in name:
+        if "admin" in name or "privilege" in name or "access control" in name or "cwe-639" in cwe or "cwe-285" in cwe:
             edges.append({
-                "source": v["id"],
+                "source": v_id,
                 "target": "node_target_admin_access",
                 "relation": "Leads to Privilege Escalation",
                 "mitre_technique": "T1078",
@@ -71,9 +99,9 @@ def generate_edges():
             })
 
         # Sızıntı / Hassas veri / Injection / XSS -> Veri Sızıntısı hedefi ile eşlenir
-        if "data" in cat.lower() or "exposure" in cat.lower() or "injection" in cat.lower() or "sensitive" in name:
+        if "data" in name or "exposure" in name or "injection" in name or "sensitive" in name or "cwe-548" in cwe or "cwe-89" in cwe:
             edges.append({
-                "source": v["id"],
+                "source": v_id,
                 "target": "node_target_data_leak",
                 "relation": "Leads to Exfiltration",
                 "mitre_technique": "T1041",
