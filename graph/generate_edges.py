@@ -2,120 +2,70 @@ import csv
 import json
 import os
 
+# Dosya yollarının dinamik olarak mutlak konumda belirlenmesi
+current_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.abspath(os.path.join(current_dir, "../inventory/inventory_v1.0.csv"))
+output_edges_path = os.path.abspath(os.path.join(current_dir, "edges.json"))
 
-def generate_edges():
-    # Çıkartılan düğümlerin okunması
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    csv_path = os.path.abspath(os.path.join(current_dir, "../inventory/inventory_v1.0.csv"))
+edges = []
+nodes_dict = {}
 
-    if not os.path.exists(csv_path):
-        print(f"CSV dosyası bulunamadı! Aranan yol: {csv_path}")
-        return
+# Sistem giriş noktaları (Entry Points) tanımı
+entry_nodes = {
+    "node_entry_login": {"name": "Giriş Portalı (Login Form)", "type": "entry"},
+    "node_entry_api": {"name": "API Endpoint", "type": "entry"},
+    "node_entry_search": {"name": "Arama Uç Noktası", "type": "entry"}
+}
 
-    # inventory_v1.0.csv verilerinin okunması
-    vulnerabilities = []
+# Nihai hedef düğümleri (Target Nodes) tanımı
+target_nodes = {
+    "node_target_admin": {"name": "Yetkisiz Admin Erişimi", "type": "target"},
+    "node_target_leak": {"name": "Hassas Veri Sızıntısı", "type": "target"}
+}
+
+# CSV veri kaynağının satır satır okunması ve işlenmesi
+if os.path.exists(csv_path):
     with open(csv_path, mode="r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             v_id = row.get("vuln_id", "").strip()
             if not v_id:
                 continue
-            vulnerabilities.append({
+
+            name = row.get("name", v_id)
+            component = row.get("component", "").lower()
+            cwe_id = row.get("cwe_id", "")
+
+            # Düğüm detay sözlüğünün oluşturulması
+            nodes_dict[v_id] = {
                 "id": v_id,
-                "name": row.get("name", "").strip(),
-                "cwe_id": row.get("cwe_id", "").strip(),
-                "component": row.get("component", "").strip().lower(),
-                "cvss_score": row.get("cvss_score", "").strip()
-            })
+                "name": f"{v_id}: {name}",
+                "description": f"Bileşen: {component} | CWE: {cwe_id}"
+            }
 
-    # Grupları ayırmak için açılan liste
-    edges = []
+            # Giriş Noktası Eşleme Mantığı
+            # Zafiyetin bileşen (component) ve CWE değerine göre uygun giriş noktasıyla ilişkilendirilmesi
+            if "login" in component or "auth" in component or "cwe-287" in cwe_id.lower() or "cwe-798" in cwe_id.lower():
+                edges.append({"source": "node_entry_login", "target": v_id, "relation": "Entry Point",
+                              "technique_name": "Initial Access"})
+            elif "api" in component or "service" in component or "cwe-200" in cwe_id.lower():
+                edges.append({"source": "node_entry_api", "target": v_id, "relation": "Entry Point",
+                              "technique_name": "API Exposure"})
+            else:
+                # Yüksek riskli veya eşleşmeyen zafiyetlerin boşta (izole) kalmaması için genel arama/giriş noktasına yönlendirme
+                edges.append({"source": "node_entry_search", "target": v_id, "relation": "Entry Point",
+                              "technique_name": "User Input Exposure"})
 
-    # Listeye eklenmesi için türlerine ayırma
-    # 1. Tüm zafiyetleri ele alıp giriş noktalarından zafiyetlere bağlantı kurulumu
-    for v in vulnerabilities:
-        comp = v["component"]
-        cwe = v["cwe_id"].lower()
-        name = v["name"].lower()
-        v_id = v["id"]
+            # Multi-step (Çok Adımlı) Zincirleme ve Hedef Bağlantı Mantığı
+            if "sql" in name.lower() or "cwe-89" in cwe_id.lower() or "admin" in component:
+                edges.append({"source": v_id, "target": "node_target_admin", "relation": "Leads To",
+                              "technique_name": "Privilege Escalation"})
+            elif "xss" in name.lower() or "disclosure" in name.lower() or "cwe-200" in cwe_id.lower():
+                edges.append({"source": v_id, "target": "node_target_leak", "relation": "Leads To",
+                              "technique_name": "Exfiltration"})
 
-        # Login ile ilişkili açıkları Login giriş noktasına bağla
-        if "login" in comp or "auth" in comp or "session" in name or "login" in name or "user-registration" in comp:
-            edges.append({
-                "source": "node_entry_login",
-                "target": v_id,
-                "relation": "Triggers",
-                "mitre_technique": "T1190",
-                "technique_name": "Exploit Public-Facing Application"
-            })
-        # API / Injection açıklarını API giriş noktasına bağla
-        elif "api" in comp or "endpoint" in comp or "rest" in comp or "basket" in comp:
-            edges.append({
-                "source": "node_entry_api",
-                "target": v_id,
-                "relation": "Exploits Endpoint",
-                "mitre_technique": "T1190",
-                "technique_name": "Exploit Public-Facing Application"
-            })
-        # Genel web açıklarını Arama uç noktasına bağla
-        else:
-            edges.append({
-                "source": "node_entry_search",
-                "target": v_id,
-                "relation": "Accesses via Input",
-                "mitre_technique": "T1190",
-                "technique_name": "Exploit Public-Facing Application"
-            })
+# Üretilen kenar listesinin edges.json dosyasına kaydedilmesi
+with open(output_edges_path, "w", encoding="utf-8") as f:
+    json.dump(edges, f, indent=4, ensure_ascii=False)
 
-    # Zincirleme (çok adımlı) yolların eklenmesi (Zafiyet 1 -> Zafiyet 2)
-    primary_vulns = [v for v in vulnerabilities if "cwe-89" in v["cwe_id"].lower() or "cwe-79" in v["cwe_id"].lower() or "injection" in v["name"].lower()]
-    secondary_vulns = [v for v in vulnerabilities if "cwe-639" in v["cwe_id"].lower() or "cwe-285" in v["cwe_id"].lower() or "access" in v["name"].lower() or "privilege" in v["name"].lower()]
-
-    for p in primary_vulns:
-        for s in secondary_vulns:
-            if p["id"] != s["id"]:
-                edges.append({
-                    "source": p["id"],
-                    "target": s["id"],
-                    "relation": "Chains To / Enables",
-                    "mitre_technique": "T1068",
-                    "technique_name": "Exploitation for Privilege Escalation"
-                })
-
-    # 2. Zafiyetlerden hedeflere bağlantı kurulumu
-    for v in vulnerabilities:
-        cwe = v["cwe_id"].lower()
-        name = v["name"].lower()
-        v_id = v["id"]
-
-        # Yetkilendirme / Admin temalı açıklar -> Admin Erişimi hedefi ile eşlenir
-        if "admin" in name or "privilege" in name or "access control" in name or "cwe-639" in cwe or "cwe-285" in cwe:
-            edges.append({
-                "source": v_id,
-                "target": "node_target_admin_access",
-                "relation": "Leads to Privilege Escalation",
-                "mitre_technique": "T1078",
-                "technique_name": "Valid Accounts"
-            })
-
-        # Sızıntı / Hassas veri / Injection / XSS -> Veri Sızıntısı hedefi ile eşlenir
-        if "data" in name or "exposure" in name or "injection" in name or "sensitive" in name or "cwe-548" in cwe or "cwe-89" in cwe:
-            edges.append({
-                "source": v_id,
-                "target": "node_target_data_leak",
-                "relation": "Leads to Exfiltration",
-                "mitre_technique": "T1041",
-                "technique_name": "Exfiltration Over C2 Channel"
-            })
-
-    # 3. JSON Olarak Kaydet
-    edges_file = os.path.join(current_dir, "edges.json")
-
-    with open(edges_file, "w", encoding="utf-8") as f:
-        json.dump(edges, f, ensure_ascii=False, indent=4)
-
-    print(f"BAŞARILI! Toplam {len(edges)} adet kenar şu konuma kaydedildi: {edges_file}")
-
-
-if __name__ == "__main__":
-    generate_edges()
+print(f"BAŞARILI! Toplam {len(edges)} kenar mantıksal olarak oluşturuldu: {output_edges_path}")

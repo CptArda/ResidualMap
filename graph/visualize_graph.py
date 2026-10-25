@@ -4,9 +4,8 @@ from pyvis.network import Network
 
 
 def create_visual_graph():
-    # Çıkartılan düğüm ve kenar dosyalarının yolları
+    # Dosya yollarının güvenli bir şekilde mutlak konumda ayarlanması
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    nodes_path = os.path.abspath(os.path.join(current_dir, "../inventory/attack_graph_nodes.json"))
     edges_path = os.path.abspath(os.path.join(current_dir, "edges.json"))
     output_path = os.path.abspath(os.path.join(current_dir, "attack_graph_v1.html"))
 
@@ -14,60 +13,74 @@ def create_visual_graph():
         print(f"Edges dosyası bulunamadı: {edges_path}")
         return
 
-    # PyVis ağı oluştur
-    net = Network(height="750px", width="100%", bgcolor="#222222", font_color="white", directed=True)
+    # PyVis ağ nesnesinin koyu tema ve yönlü (directed) yapı ile başlatılması
+    net = Network(height="800px", width="100%", bgcolor="#1a1a1a", font_color="white", directed=True)
 
-    # Kenarları yükle
+    # Kenar verilerinin JSON dosyasından okunması
     with open(edges_path, "r", encoding="utf-8") as f:
         edges = json.load(f)
 
-    # Sadece kenarlarda geçen (aktif) düğüm ID'lerini topla
-    active_node_ids = set()
+    # Grafik karmaşasını önlemek adına yalnızca aktif (kenarı bulunan) düğüm kimliklerinin toplanması
+    active_nodes = set()
     for e in edges:
         if e.get("source"):
-            active_node_ids.add(e.get("source"))
+            active_nodes.add(e.get("source"))
         if e.get("target"):
-            active_node_ids.add(e.get("target"))
+            active_nodes.add(e.get("target"))
 
-    # Düğüm detaylarını yükle (Sadece aktif olanları ekle)
-    node_details = {}
-    if os.path.exists(nodes_path):
-        with open(nodes_path, "r", encoding="utf-8") as f:
-            nodes = json.load(f)
-            for node in nodes:
-                n_id = node.get("id")
-                if n_id in active_node_ids:
-                    node_details[n_id] = {
-                        "label": node.get("name", n_id),
-                        "title": node.get("description", "")
-                    }
-
-    # Aktif düğümleri ağa ekle (Giriş, hedef ve zafiyetlere göre renklendirme)
-    for n_id in active_node_ids:
-        details = node_details.get(n_id, {})
-        label = details.get("label", n_id)
-        title = details.get("title", "")
-
+    # Aktif düğümlerin ağ yapılandırmasına eklenmesi (Türlerine göre hiyerarşi seviyesi ve renk ataması)
+    for n_id in active_nodes:
         if "node_entry" in n_id:
-            net.add_node(n_id, label=label, title=title, color="#ff9900", size=25)
+            label = n_id.replace("node_entry_", "Giriş: ").upper()
+            net.add_node(n_id, label=label, title=f"Giriş Noktası: {n_id}", color="#ff9900", size=30, level=0)
         elif "node_target" in n_id:
-            net.add_node(n_id, label=label, title=title, color="#00cc66", size=25)
+            label = n_id.replace("node_target_", "Hedef: ").upper()
+            net.add_node(n_id, label=label, title=f"Kritik Hedef: {n_id}", color="#ff4d4d", size=35, level=2)
         else:
-            net.add_node(n_id, label=label, title=title, color="#3388ff", size=15)
+            # Zafiyet düğümleri (V001 vb.) için etiket ve ipucu ayarları
+            label = n_id
+            title_text = f"Zafiyet ID: {n_id}"
+            net.add_node(n_id, label=label, title=title_text, color="#3388ff", size=20, level=1)
 
-    # Kenarları ekle
+    # Kenarların eklenmesi (Ekran kalabalığını önlemek için sabit label kullanılmaz, hover için title kullanılır)
     for e in edges:
         source = e.get("source")
         target = e.get("target")
-        edge_title = f"{e.get('relation', '')} - {e.get('technique_name', '')}"
-        edge_label = e.get("relation", "")
+        relation = e.get("relation", "")
+        technique = e.get("technique_name", "")
+
+        # Kullanıcı fare ile kenarın üzerine geldiğinde (hover) görünecek detaylı açıklama metni
+        hover_title = f"İlişki: {relation}\nTeknik: {technique}"
 
         if source and target:
-            net.add_edge(source, target, title=edge_title, label=edge_label)
+            net.add_edge(source, target, title=hover_title, arrowStrikethrough=False)
 
+    # Okunabilirliği maksimize eden Hiyerarşik Düzen (Hierarchical Layout) ve fizik motoru konfigürasyonu
+    net.set_options("""
+    {
+      "layout": {
+        "hierarchical": {
+          "enabled": true,
+          "direction": "LR",
+          "sortMethod": "directed",
+          "nodeSpacing": 150,
+          "treeSpacing": 200
+        }
+      },
+      "physics": {
+        "hierarchicalRepulsion": {
+          "centralGravity": 0.0,
+          "springLength": 100,
+          "springConstant": 0.01,
+          "nodeDistance": 120
+        }
+      }
+    }
+    """)
 
+    # İnteraktif HTML çıktısının attack_graph_v1.html olarak kaydedilmesi
     net.save_graph(output_path)
-    print(f"BAŞARILI! Aktif saldırı yolları ile Attack Graph v1 oluşturuldu: {output_path}")
+    print(f"BAŞARILI! Hiyerarşik Attack Graph v1 başarıyla oluşturuldu: {output_path}")
 
 
 if __name__ == "__main__":

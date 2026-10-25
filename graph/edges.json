@@ -2,491 +2,247 @@
     {
         "source": "node_entry_login",
         "target": "V001",
-        "relation": "Triggers",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "Initial Access"
+    },
+    {
+        "source": "V001",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Privilege Escalation"
     },
     {
         "source": "node_entry_search",
         "target": "V002",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
+    },
+    {
+        "source": "V002",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Privilege Escalation"
     },
     {
         "source": "node_entry_search",
         "target": "V003",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
+    },
+    {
+        "source": "V003",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Exfiltration"
     },
     {
         "source": "node_entry_search",
         "target": "V004",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
+    },
+    {
+        "source": "V004",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Exfiltration"
     },
     {
         "source": "node_entry_api",
         "target": "V005",
-        "relation": "Exploits Endpoint",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "API Exposure"
     },
     {
-        "source": "node_entry_api",
+        "source": "V005",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Exfiltration"
+    },
+    {
+        "source": "node_entry_search",
         "target": "V006",
-        "relation": "Exploits Endpoint",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
-        "source": "node_entry_api",
+        "source": "node_entry_search",
         "target": "V007",
-        "relation": "Exploits Endpoint",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
-        "source": "node_entry_login",
+        "source": "node_entry_search",
         "target": "V008",
-        "relation": "Triggers",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V009",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V010",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V011",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V012",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V013",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
-        "source": "node_entry_search",
+        "source": "node_entry_login",
         "target": "V014",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "Initial Access"
     },
     {
         "source": "node_entry_login",
         "target": "V015",
-        "relation": "Triggers",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "Initial Access"
     },
     {
         "source": "node_entry_search",
         "target": "V016",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V017",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V018",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V019",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V020",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V021",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V022",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V023",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V024",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V025",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V026",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V027",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V028",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V029",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V030",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V031",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V032",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V033",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V034",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V035",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     },
     {
         "source": "node_entry_search",
         "target": "V036",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "V001",
-        "target": "V006",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V001",
-        "target": "V007",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V001",
-        "target": "V010",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V001",
-        "target": "V030",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V002",
-        "target": "V006",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V002",
-        "target": "V007",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V002",
-        "target": "V010",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V002",
-        "target": "V030",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V003",
-        "target": "V006",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V003",
-        "target": "V007",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V003",
-        "target": "V010",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V003",
-        "target": "V030",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V004",
-        "target": "V006",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V004",
-        "target": "V007",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V004",
-        "target": "V010",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V004",
-        "target": "V030",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V005",
-        "target": "V006",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V005",
-        "target": "V007",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V005",
-        "target": "V010",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V005",
-        "target": "V030",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V014",
-        "target": "V006",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V014",
-        "target": "V007",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V014",
-        "target": "V010",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V014",
-        "target": "V030",
-        "relation": "Chains To / Enables",
-        "mitre_technique": "T1068",
-        "technique_name": "Exploitation for Privilege Escalation"
-    },
-    {
-        "source": "V001",
-        "target": "node_target_admin_access",
-        "relation": "Leads to Privilege Escalation",
-        "mitre_technique": "T1078",
-        "technique_name": "Valid Accounts"
-    },
-    {
-        "source": "V001",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "V002",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "V006",
-        "target": "node_target_admin_access",
-        "relation": "Leads to Privilege Escalation",
-        "mitre_technique": "T1078",
-        "technique_name": "Valid Accounts"
-    },
-    {
-        "source": "V007",
-        "target": "node_target_admin_access",
-        "relation": "Leads to Privilege Escalation",
-        "mitre_technique": "T1078",
-        "technique_name": "Valid Accounts"
-    },
-    {
-        "source": "V008",
-        "target": "node_target_admin_access",
-        "relation": "Leads to Privilege Escalation",
-        "mitre_technique": "T1078",
-        "technique_name": "Valid Accounts"
-    },
-    {
-        "source": "V009",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "V010",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "V015",
-        "target": "node_target_admin_access",
-        "relation": "Leads to Privilege Escalation",
-        "mitre_technique": "T1078",
-        "technique_name": "Valid Accounts"
-    },
-    {
-        "source": "V030",
-        "target": "node_target_admin_access",
-        "relation": "Leads to Privilege Escalation",
-        "mitre_technique": "T1078",
-        "technique_name": "Valid Accounts"
+        "relation": "Entry Point",
+        "technique_name": "User Input Exposure"
     }
 ]
