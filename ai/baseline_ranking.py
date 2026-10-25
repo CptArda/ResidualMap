@@ -25,7 +25,7 @@ def main():
     # Veriyi oku
     df = pd.read_csv(args.features)
 
- 
+
     required_cols = ["vuln_id", "cve_id", "name", "cwe_id", "cvss_score"]
     missing = [col for col in required_cols if col not in df.columns]
 

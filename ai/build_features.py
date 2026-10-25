@@ -41,7 +41,7 @@ def main():
         user_interaction = "Hayır" if vector_parts.get("UI") == "N" else "Evet"
 
         features.append({
-   
+
             "vuln_id": r.get("vuln_id", ""),
             "cve_id": r.get("cve_id", ""),
             "name": r.get("name", ""),
