@@ -1,0 +1,434 @@
+[
+    {
+        "source": "node_entry_login",
+        "target": "V001",
+        "relation": "Entry Point",
+        "technique_name": "Initial Access via Authentication & Session"
+    },
+    {
+        "source": "V001",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Administrator Access"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V002",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V002",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V003",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V003",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V004",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V004",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V005",
+        "relation": "Entry Point",
+        "technique_name": "API Interface & Service Exposure"
+    },
+    {
+        "source": "V005",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V006",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V006",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V007",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V007",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V008",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V008",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Administrator Access"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V009",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V009",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V010",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V010",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V011",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V011",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V012",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V012",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V013",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V013",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V014",
+        "relation": "Entry Point",
+        "technique_name": "Initial Access via Authentication & Session"
+    },
+    {
+        "source": "V014",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Administrator Access"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V015",
+        "relation": "Entry Point",
+        "technique_name": "Initial Access via Authentication & Session"
+    },
+    {
+        "source": "V015",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Administrator Access"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V016",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V016",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V017",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V017",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V018",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V018",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V019",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V019",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V020",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V020",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V021",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V021",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V022",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V022",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Administrator Access"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V023",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V023",
+        "target": "node_target_rce",
+        "relation": "Leads To",
+        "technique_name": "Remote Code Execution & System Compromise"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V024",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V024",
+        "target": "node_target_rce",
+        "relation": "Leads To",
+        "technique_name": "Remote Code Execution & System Compromise"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V025",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V025",
+        "target": "node_target_leak",
+        "relation": "Leads To",
+        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V026",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V026",
+        "target": "node_target_account_takeover",
+        "relation": "Leads To",
+        "technique_name": "Account Takeover via Client-Side Attack"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V027",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V027",
+        "target": "node_target_rce",
+        "relation": "Leads To",
+        "technique_name": "Remote Code Execution & System Compromise"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V028",
+        "relation": "Entry Point",
+        "technique_name": "API Interface & Service Exposure"
+    },
+    {
+        "source": "V028",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Administrator Access"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V029",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V029",
+        "target": "node_target_rce",
+        "relation": "Leads To",
+        "technique_name": "Remote Code Execution & System Compromise"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V030",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V030",
+        "target": "node_target_admin",
+        "relation": "Leads To",
+        "technique_name": "Unauthorized Administrator Access"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V031",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V031",
+        "target": "node_target_rce",
+        "relation": "Leads To",
+        "technique_name": "Remote Code Execution & System Compromise"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V032",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V032",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service & Resource Exhaustion"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V033",
+        "relation": "Entry Point",
+        "technique_name": "API Interface & Service Exposure"
+    },
+    {
+        "source": "V033",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service & Resource Exhaustion"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V034",
+        "relation": "Entry Point",
+        "technique_name": "Vector via LOGIN"
+    },
+    {
+        "source": "V034",
+        "target": "node_target_dos",
+        "relation": "Leads To",
+        "technique_name": "Denial of Service & Resource Exhaustion"
+    },
+    {
+        "source": "node_entry_api",
+        "target": "V035",
+        "relation": "Entry Point",
+        "technique_name": "Vector via API"
+    },
+    {
+        "source": "V035",
+        "target": "node_target_rce",
+        "relation": "Leads To",
+        "technique_name": "Remote Code Execution & System Compromise"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V036",
+        "relation": "Entry Point",
+        "technique_name": "Vector via SEARCH"
+    },
+    {
+        "source": "V036",
+        "target": "node_target_rce",
+        "relation": "Leads To",
+        "technique_name": "Remote Code Execution & System Compromise"
+    }
+]
