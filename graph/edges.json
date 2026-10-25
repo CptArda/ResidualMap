@@ -1,1213 +1,492 @@
 [
     {
+        "source": "node_entry_login",
+        "target": "V001",
+        "relation": "Triggers",
+        "mitre_technique": "T1190",
+        "technique_name": "Exploit Public-Facing Application"
+    },
+    {
         "source": "node_entry_search",
-        "target": "node_vuln_1",
+        "target": "V002",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_2",
+        "target": "V003",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_3",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_4",
+        "target": "V004",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_api",
-        "target": "node_vuln_5",
-        "relation": "Exploits Endpoint",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_6",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_7",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_8",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_9",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_10",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_11",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_12",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_13",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_14",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_15",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_16",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_17",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_18",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_19",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_20",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_21",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_22",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_23",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_24",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_25",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_26",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_27",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_28",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_29",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_30",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_31",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_32",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_33",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_34",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_35",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_36",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_37",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_38",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_39",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_40",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_41",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_42",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_43",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_44",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_45",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_46",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_47",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_48",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_49",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_50",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_51",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_52",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_53",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_54",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_55",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_56",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_57",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_58",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_59",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_60",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_61",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_62",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_63",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_64",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_65",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_66",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_67",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_68",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_69",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_70",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_71",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_72",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_73",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_74",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_75",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_76",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_77",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_78",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_79",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_80",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_81",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_82",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_83",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_84",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_85",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_86",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_87",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_88",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_89",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_90",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_91",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_92",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_93",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_94",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_95",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_96",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_97",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_98",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_99",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_100",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_101",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_102",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_103",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_104",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_105",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_106",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_107",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_108",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_109",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_110",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_111",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_112",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_113",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_114",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_115",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_116",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_117",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_118",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_119",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_120",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_121",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_search",
-        "target": "node_vuln_122",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_api",
-        "target": "node_vuln_123",
+        "target": "V005",
         "relation": "Exploits Endpoint",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_api",
-        "target": "node_vuln_124",
+        "target": "V006",
         "relation": "Exploits Endpoint",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_api",
-        "target": "node_vuln_125",
+        "target": "V007",
         "relation": "Exploits Endpoint",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_126",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
-    },
-    {
-        "source": "node_entry_api",
-        "target": "node_vuln_127",
-        "relation": "Exploits Endpoint",
+        "source": "node_entry_login",
+        "target": "V008",
+        "relation": "Triggers",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_128",
+        "target": "V009",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_129",
+        "target": "V010",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_130",
+        "target": "V011",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_131",
+        "target": "V012",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_132",
+        "target": "V013",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_133",
+        "target": "V014",
+        "relation": "Accesses via Input",
+        "mitre_technique": "T1190",
+        "technique_name": "Exploit Public-Facing Application"
+    },
+    {
+        "source": "node_entry_login",
+        "target": "V015",
+        "relation": "Triggers",
+        "mitre_technique": "T1190",
+        "technique_name": "Exploit Public-Facing Application"
+    },
+    {
+        "source": "node_entry_search",
+        "target": "V016",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_134",
+        "target": "V017",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_135",
+        "target": "V018",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_136",
+        "target": "V019",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_137",
+        "target": "V020",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_138",
+        "target": "V021",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_139",
+        "target": "V022",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_140",
+        "target": "V023",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_141",
+        "target": "V024",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_142",
+        "target": "V025",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_143",
+        "target": "V026",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_144",
+        "target": "V027",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_145",
+        "target": "V028",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_146",
+        "target": "V029",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_147",
+        "target": "V030",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_148",
+        "target": "V031",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_149",
+        "target": "V032",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_150",
+        "target": "V033",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_151",
+        "target": "V034",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_152",
+        "target": "V035",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
         "source": "node_entry_search",
-        "target": "node_vuln_153",
+        "target": "V036",
         "relation": "Accesses via Input",
         "mitre_technique": "T1190",
         "technique_name": "Exploit Public-Facing Application"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_154",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "source": "V001",
+        "target": "V006",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_155",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "source": "V001",
+        "target": "V007",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_156",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "source": "V001",
+        "target": "V010",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_157",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "source": "V001",
+        "target": "V030",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_158",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "source": "V002",
+        "target": "V006",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_159",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "source": "V002",
+        "target": "V007",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
     },
     {
-        "source": "node_entry_search",
-        "target": "node_vuln_160",
-        "relation": "Accesses via Input",
-        "mitre_technique": "T1190",
-        "technique_name": "Exploit Public-Facing Application"
+        "source": "V002",
+        "target": "V010",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
     },
     {
-        "source": "node_vuln_2",
+        "source": "V002",
+        "target": "V030",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V003",
+        "target": "V006",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V003",
+        "target": "V007",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V003",
+        "target": "V010",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V003",
+        "target": "V030",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V004",
+        "target": "V006",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V004",
+        "target": "V007",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V004",
+        "target": "V010",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V004",
+        "target": "V030",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V005",
+        "target": "V006",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V005",
+        "target": "V007",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V005",
+        "target": "V010",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V005",
+        "target": "V030",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V014",
+        "target": "V006",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V014",
+        "target": "V007",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V014",
+        "target": "V010",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V014",
+        "target": "V030",
+        "relation": "Chains To / Enables",
+        "mitre_technique": "T1068",
+        "technique_name": "Exploitation for Privilege Escalation"
+    },
+    {
+        "source": "V001",
         "target": "node_target_admin_access",
         "relation": "Leads to Privilege Escalation",
         "mitre_technique": "T1078",
         "technique_name": "Valid Accounts"
     },
     {
-        "source": "node_vuln_5",
+        "source": "V001",
         "target": "node_target_data_leak",
         "relation": "Leads to Exfiltration",
         "mitre_technique": "T1041",
         "technique_name": "Exfiltration Over C2 Channel"
     },
     {
-        "source": "node_vuln_7",
+        "source": "V002",
         "target": "node_target_data_leak",
         "relation": "Leads to Exfiltration",
         "mitre_technique": "T1041",
         "technique_name": "Exfiltration Over C2 Channel"
     },
     {
-        "source": "node_vuln_8",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "node_vuln_20",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "node_vuln_27",
+        "source": "V006",
         "target": "node_target_admin_access",
         "relation": "Leads to Privilege Escalation",
         "mitre_technique": "T1078",
         "technique_name": "Valid Accounts"
     },
     {
-        "source": "node_vuln_29",
+        "source": "V007",
+        "target": "node_target_admin_access",
+        "relation": "Leads to Privilege Escalation",
+        "mitre_technique": "T1078",
+        "technique_name": "Valid Accounts"
+    },
+    {
+        "source": "V008",
+        "target": "node_target_admin_access",
+        "relation": "Leads to Privilege Escalation",
+        "mitre_technique": "T1078",
+        "technique_name": "Valid Accounts"
+    },
+    {
+        "source": "V009",
         "target": "node_target_data_leak",
         "relation": "Leads to Exfiltration",
         "mitre_technique": "T1041",
         "technique_name": "Exfiltration Over C2 Channel"
     },
     {
-        "source": "node_vuln_34",
+        "source": "V010",
         "target": "node_target_data_leak",
         "relation": "Leads to Exfiltration",
         "mitre_technique": "T1041",
         "technique_name": "Exfiltration Over C2 Channel"
     },
     {
-        "source": "node_vuln_38",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
+        "source": "V015",
+        "target": "node_target_admin_access",
+        "relation": "Leads to Privilege Escalation",
+        "mitre_technique": "T1078",
+        "technique_name": "Valid Accounts"
     },
     {
-        "source": "node_vuln_43",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "node_vuln_67",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "node_vuln_75",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
-    },
-    {
-        "source": "node_vuln_107",
-        "target": "node_target_data_leak",
-        "relation": "Leads to Exfiltration",
-        "mitre_technique": "T1041",
-        "technique_name": "Exfiltration Over C2 Channel"
+        "source": "V030",
+        "target": "node_target_admin_access",
+        "relation": "Leads to Privilege Escalation",
+        "mitre_technique": "T1078",
+        "technique_name": "Valid Accounts"
     }
 ]
