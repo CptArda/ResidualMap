@@ -36,9 +36,25 @@ services:
       ERRORLOG: /var/log/nginx/error.log
       LOGLEVEL: warn
     volumes:
+      - ./nginx/logging.conf.template:/etc/nginx/templates/conf.d/logging.conf.template:ro
       - ./logs/nginx:/var/log/nginx
       - ./logs/modsecurity:/var/log/modsecurity
     networks: [lab]
+  suricata:
+      image: jasonish/suricata:latest
+      container_name: lab-suricata
+      restart: unless-stopped
+      network_mode: "service:waf"
+      cap_add:
+        - NET_ADMIN
+        - NET_RAW
+        - SYS_NICE
+      depends_on:
+        - waf
+      command: -i eth0 -S /etc/suricata/custom/local.rules
+      volumes:
+        - ./suricata/rules:/etc/suricata/custom
+        - ./suricata/logs:/var/log/suricata
 
 networks:
   lab:
