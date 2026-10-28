@@ -1,2 +1,4 @@
 logs/*.log
 logs/*/*.log
+suricata/logs/*
+!suricata/logs/.gitkeep
