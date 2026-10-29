@@ -24,7 +24,7 @@ def create_visual_graph():
                 if v_id and v_name:
                     vulnerability_names[v_id] = v_name
 
-    net = Network(height="900px", width="100%", bgcolor="#1a1a1a", font_color="white", directed=True)
+    net = Network(height="950px", width="100%", bgcolor="#1a1a1a", font_color="white", directed=True)
 
     with open(edges_path, "r", encoding="utf-8") as f:
         edges = json.load(f)
@@ -43,7 +43,7 @@ def create_visual_graph():
             net.add_node(node_id, label=label, title=f"Giriş Vektörü: {node_id}", color="#ff9900", size=30, level=0)
 
         elif "node_target" in node_id:
-            # KRİTİK HEDEFLER: Etiket (label) kısmına doğrudan isimler atanıyor
+            # KRİTİK HEDEFLER (Level 2)
             target_labels = {
                 "node_target_admin": "Yetkisiz Admin Erişimi",
                 "node_target_leak": "Hassas Veri Sızıntısı",
@@ -51,19 +51,18 @@ def create_visual_graph():
                 "node_target_rce": "RCE ve Sistem Ele Geçirme",
                 "node_target_dos": "Hizmet Engelleme (DoS)"
             }
-            # Etiket doğrudan sözlükten alınır, yoksa düzenlenmiş ID basılır
             label = target_labels.get(node_id, node_id.replace("node_target_", "").replace("_", " ").title())
             title_text = f"Kritik Hedef Düğümü\nKimlik: {node_id}\nAçıklama: {label}"
 
-            # label=label parametresi sayesinde grafikte kutunun üstünde doğrudan bu isim yazar
             net.add_node(node_id, label=label, title=title_text, color="#ff4d4d", size=35, level=2)
 
         else:
-            # Zafiyet Düğümleri (Level 1) -> Doğrudan CSV'deki ist (name)
+            # Zafiyet Düğümleri (Level 1)
             label = vulnerability_names.get(node_id, node_id)
             title_text = f"Zafiyet ID: {node_id}\nİsim: {label}"
             net.add_node(node_id, label=label, title=title_text, color="#3388ff", size=20, level=1)
 
+    # Kenarların eklenmesi ve ilişki türüne göre renklendirilmesi
     for edge in edges:
         source = edge.get("source")
         target = edge.get("target")
@@ -71,34 +70,92 @@ def create_visual_graph():
         technique = edge.get("technique_name", "")
 
         hover_title = f"İlişki: {relation}\nTeknik: {technique}"
+
+        # İlişki türüne göre renk kodlaması (Yollar renkli ve takip edilebilir olur)
+        if relation == "Entry Point":
+            edge_color = "#ff9900"  # Turuncu (Giriş yolları)
+        elif relation == "Chains To":
+            edge_color = "#3388ff"  # Mavi (Zafiyet zincirleri)
+        elif relation == "Leads To":
+            edge_color = "#ff4d4d"  # Kırmızı (Hedef sonuçları)
+        else:
+            edge_color = "#aaaaaa"
+
         if source and target:
-            net.add_edge(source, target, title=hover_title, arrowStrikethrough=False)
+            net.add_edge(
+                source, target,
+                title=hover_title,
+                color=edge_color,
+                width=2,
+                arrowStrikethrough=False
+            )
 
     net.set_options("""
     {
       "layout": {
+        "improvedLayout": true,
         "hierarchical": {
           "enabled": true,
           "direction": "LR",
           "sortMethod": "directed",
-          "nodeSpacing": 200,
-          "treeSpacing": 250,
-          "levelSeparation": 340
+          "levelSeparation": 350,
+          "nodeSpacing": 180,
+          "treeSpacing": 220,
+          "blockShifting": true,
+          "edgeMinimization": true,
+          "parentCentralization": false
         }
       },
       "physics": {
-        "hierarchicalRepulsion": {
-          "centralGravity": 0.0,
-          "springLength": 150,
-          "springConstant": 0.01,
-          "nodeDistance": 150
+        "enabled": false
+      },
+      "nodes": {
+        "shape": "box",
+        "margin": 12,
+        "widthConstraint": {
+          "maximum": 200
+        },
+        "font": {
+          "size": 14,
+          "face": "Arial",
+          "color": "#FFFFFF",
+          "bold": false
+        },
+        "borderWidth": 1,
+        "shadow": true
+      },
+      "edges": {
+        "width": 1.5,
+        "arrows": {
+          "to": {
+            "enabled": true,
+            "scaleFactor": 0.8
+          }
+        },
+        "smooth": {
+          "enabled": true,
+          "type": "cubicBezier",
+          "forceDirection": "horizontal",
+          "roundness": 0.3
+        },
+        "color": {
+          "inherit": false,
+          "opacity": 0.65
         }
+      },
+      "interaction": {
+        "dragNodes": true,
+        "zoomView": true,
+        "dragView": true,
+        "hover": true,
+        "navigationButtons": true,
+        "hideEdgesOnDrag": true
       }
     }
     """)
 
     net.save_graph(output_path)
-    print(f"[BAŞARILI] Hedef etiketleri güncellenerek grafik kaydedildi: {output_path}")
+    print(f"[BAŞARILI] Renkli yollar ve optimize dikey yerleşim uygulandı: {output_path}")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,5 @@
 # En Kritik 10 Zafiyet (Envanter v1.0)
 
-Kaynak: `inventory/inventory_v1.0.csv` (36 kayıt). Sıralama ölçütü: CVSS v3.1 skoru, eşitlikte varlık kritikliği (`asset_criticality`), sonra EPSS.
 Kaynak: inventory/inventory_v1.0.csv (36 kayıt). Sıralama ölçütü: CVSS v3.1 skoru, eşitlikte varlık kritikliği (asset_criticality), sonra EPSS. [EMIN DEGIL] işaretli ve kaynak (Trivy) ile CVSS skoru çelişen kayıtlar bu sıralamanın dışında tutulmuştur (bkz. aşağıdaki Not)
 
 | # | ID | Zafiyet | CVE | CVSS | EPSS | Kritiklik |
