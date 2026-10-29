@@ -430,5 +430,11 @@
         "target": "node_target_rce",
         "relation": "Leads To",
         "technique_name": "Remote Code Execution & System Compromise"
+    },
+    {
+        "source": "V002",
+        "target": "V025",
+        "relation": "Chains To",
+        "technique_name": "password_hashes elde edilince mümkün olur"
     }
 ]
