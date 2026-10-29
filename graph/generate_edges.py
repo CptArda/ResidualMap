@@ -7,7 +7,6 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH = os.path.abspath(os.path.join(CURRENT_DIR, "../inventory/inventory_v1.0.csv"))
 OUTPUT_EDGES_PATH = os.path.abspath(os.path.join(CURRENT_DIR, "edges.json"))
 
-
 # CWE kümeleri: Zafiyetleri siber güvenlik hedeflerine deterministik olarak eşlemek için tanımlanan listeler
 ADMIN_CWES = {"cwe-798", "cwe-521", "cwe-20", "cwe-290", "cwe-285", "cwe-915"}
 LEAK_CWES = {"cwe-200", "cwe-548", "cwe-611", "cwe-209", "cwe-264", "cwe-497", "cwe-328"}
@@ -19,8 +18,11 @@ DOS_CWES = {"cwe-400", "cwe-476", "cwe-248"}
 def map_to_target(v_id, name, cwe_id):
     """
     Zafiyetin CWE koduna ve adına bakarak nihai etki hedefini belirler.
-    CWE-89 gibi istisnai durumlarda isme dayalı ayrım yapar; eşleşmezse None döner.
+    V025 için özel olarak hedefi node_target_admin (admin erişimi) olarak sabitler.
     """
+    if v_id == "V025":
+        return "node_target_admin"
+
     cwe = cwe_id.lower().strip()
     name_lower = name.lower()
 
@@ -60,7 +62,6 @@ TARGET_TECHNIQUE_NAMES = {
 
 
 def generate_attack_edges():
-
     edges = []
 
     # Envanter dosyasının kontrolü
@@ -82,7 +83,6 @@ def generate_attack_edges():
                 "name": row.get("name", "").strip(),
                 "component": row.get("component", "").strip().lower(),
                 "cwe_id": row.get("cwe_id", "").strip().upper(),
-                # Yetenek tabanlı zincirleme için capability sütunları (yoksa varsayılan: "none")
                 "requires_capability": row.get("requires_capability", "none").strip().lower() or "none",
                 "grants_capability": row.get("grants_capability", "none").strip().lower() or "none",
             })
@@ -102,23 +102,25 @@ def generate_attack_edges():
         name = v["name"]
         component = v["component"]
         cwe_id = v["cwe_id"]
+        requires = v["requires_capability"]
         name_lower = name.lower()
 
-        # Giriş Noktası (Entry Point) Vektörünün Belirlenmesi
-        if any(k in cwe_id.lower() or k in component or k in name_lower for k in ["287", "798", "auth", "login", "session", "credential"]):
-            entry_node, technique_initial = entry_nodes_pool[0]
-        elif any(k in cwe_id.lower() or k in component or k in name_lower for k in ["200", "api", "service", "endpoint", "exposure", "proxy", "ws"]):
-            entry_node, technique_initial = entry_nodes_pool[1]
-        else:
-            chosen_entry = entry_nodes_pool[index % len(entry_nodes_pool)]
-            entry_node, technique_initial = chosen_entry[0], f"Vector via {chosen_entry[0].replace('node_entry_', '').upper()}"
+        # KRİTİK DÜZELTME: Eğer zafiyetin bir ön koşulu (requires) varsa, dışarıdan doğrudan giriş noktası ATAMA!
+        if requires == "none":
+            if any(k in cwe_id.lower() or k in component or k in name_lower for k in ["287", "798", "auth", "login", "session", "credential"]):
+                entry_node, technique_initial = entry_nodes_pool[0]
+            elif any(k in cwe_id.lower() or k in component or k in name_lower for k in ["200", "api", "service", "endpoint", "exposure", "proxy", "ws"]):
+                entry_node, technique_initial = entry_nodes_pool[1]
+            else:
+                chosen_entry = entry_nodes_pool[index % len(entry_nodes_pool)]
+                entry_node, technique_initial = chosen_entry[0], f"Vector via {chosen_entry[0].replace('node_entry_', '').upper()}"
 
-        edges.append({
-            "source": entry_node,
-            "target": v_id,
-            "relation": "Entry Point",
-            "technique_name": technique_initial
-        })
+            edges.append({
+                "source": entry_node,
+                "target": v_id,
+                "relation": "Entry Point",
+                "technique_name": technique_initial
+            })
 
         # CWE bazlı hedef eşlemesi ve Leads To kenarının eklenmesi
         target_node = map_to_target(v_id, name, cwe_id)
@@ -151,14 +153,23 @@ def generate_attack_edges():
                         "technique_name": f"{requires} elde edilince mümkün olur"
                     })
 
-    # Üretilen kenar listesinin edges.json dosyasına yazılması
+    # Tekrarlayan ve fazla kenarların temizlenmesi (Unique edges)
+    unique_edges = []
+    seen = set()
+    for e in edges:
+        identifier = (e['source'], e['target'], e['relation'])
+        if identifier not in seen:
+            seen.add(identifier)
+            unique_edges.append(e)
+
+    # Üretilen tekil kenar listesinin edges.json dosyasına yazılması
     with open(OUTPUT_EDGES_PATH, "w", encoding="utf-8") as outfile:
-        json.dump(edges, outfile, indent=4, ensure_ascii=False)
+        json.dump(unique_edges, outfile, indent=4, ensure_ascii=False)
 
     # İşlem sonuç raporu
-    print(f"[BAŞARILI] Toplam {len(edges)} kenar üretildi: {OUTPUT_EDGES_PATH}")
+    print(f"[BAŞARILI] Toplam {len(unique_edges)} tekil kenar üretildi: {OUTPUT_EDGES_PATH}")
     if unmapped_targets:
-        print(f"[UYARI] {len(unmapped_targets)} zafiyet hiçbir hedefe eşlenemedi (muhtemelen düşük etkili/destekleyici bulgular): {', '.join(unmapped_targets)}")
+        print(f"[UYARI] {len(unmapped_targets)} zafiyet hiçbir hedefe eşlenemedi: {', '.join(unmapped_targets)}")
     else:
         print("Tüm zafiyetler bir hedefe eşlendi.")
 

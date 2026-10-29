@@ -288,16 +288,10 @@
         "technique_name": "Remote Code Execution & System Compromise"
     },
     {
-        "source": "node_entry_login",
-        "target": "V025",
-        "relation": "Entry Point",
-        "technique_name": "Vector via LOGIN"
-    },
-    {
         "source": "V025",
-        "target": "node_target_leak",
+        "target": "node_target_admin",
         "relation": "Leads To",
-        "technique_name": "Sensitive Data Exfiltration & Database Exposure"
+        "technique_name": "Unauthorized Administrator Access"
     },
     {
         "source": "node_entry_api",
